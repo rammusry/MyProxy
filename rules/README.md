@@ -1,6 +1,6 @@
 # SRS Rules
 
-Generated on: 2025-06-25 14:48:46 UTC
+Generated on: 2025-06-25 16:37:25 UTC
 
 ## Available Rules
 
@@ -15,3 +15,9 @@ Generated on: 2025-06-25 14:48:46 UTC
 - [ry-rule-proxy.json](./ry-rule-proxy.json)
 - [ry-rule-pure.json](./ry-rule-pure.json)
 - [ry-rule-reject.json](./ry-rule-reject.json)
+
+### YAML Files (Original Source)
+- [ry-rule-direct.yaml](./ry-rule-direct.yaml)
+- [ry-rule-proxy.yaml](./ry-rule-proxy.yaml)
+- [ry-rule-pure.yaml](./ry-rule-pure.yaml)
+- [ry-rule-reject.yaml](./ry-rule-reject.yaml)

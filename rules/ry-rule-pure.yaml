@@ -1,0 +1,4 @@
+payload:
+# talkatone规则
+  - PROCESS-NAME,com.talkatone.android
+  - DOMAIN-SUFFIX,tktn.be
