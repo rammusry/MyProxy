@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "tktn.be"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".tktn.be"
+      ]
+    }
+  ],
+  "version": 1
+}

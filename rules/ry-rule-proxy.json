@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "710410.xyz"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".710410.xyz"
+      ]
+    }
+  ],
+  "version": 1
+}

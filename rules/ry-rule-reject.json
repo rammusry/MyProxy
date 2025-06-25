@@ -1,0 +1,33 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "ads.inmobi.com",
+        "adsappier.com",
+        "amazon-adsystem.com",
+        "appier.net",
+        "appiersig.com",
+        "criteo.com",
+        "googleads.g.doubleclick.net",
+        "pubmatic.com",
+        "smaato.net",
+        "tappx.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".ads.inmobi.com",
+        ".adsappier.com",
+        ".amazon-adsystem.com",
+        ".appier.net",
+        ".appiersig.com",
+        ".criteo.com",
+        ".googleads.g.doubleclick.net",
+        ".pubmatic.com",
+        ".smaato.net",
+        ".tappx.com"
+      ]
+    }
+  ],
+  "version": 1
+}
