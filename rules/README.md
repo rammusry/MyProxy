@@ -1,20 +1,14 @@
 # SRS Rules
 
-Generated on: 2025-06-29 12:44:45 UTC
+Generated on: 2025-06-29 15:04:18 UTC
 
 ## Available Rules
 
 ### SRS Files (Binary)
-- [ry-rule-direct.srs](./ry-rule-direct.srs)
-- [ry-rule-proxy.srs](./ry-rule-proxy.srs)
-- [ry-rule-pure.srs](./ry-rule-pure.srs)
-- [ry-rule-reject.srs](./ry-rule-reject.srs)
+- [test_input.srs](./test_input.srs)
 
 ### JSON Files (Source)
-- [ry-rule-direct.json](./ry-rule-direct.json)
-- [ry-rule-proxy.json](./ry-rule-proxy.json)
-- [ry-rule-pure.json](./ry-rule-pure.json)
-- [ry-rule-reject.json](./ry-rule-reject.json)
+- [test_input.json](./test_input.json)
 
 ### YAML Files (Original Source)
 - [ry-rule-direct.yaml](./ry-rule-direct.yaml)

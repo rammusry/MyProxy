@@ -1,0 +1,21 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "test-func.org",
+        "test-functionality.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".test-func.org"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "10.0.0.0/8"
+      ]
+    }
+  ],
+  "version": 1
+}
