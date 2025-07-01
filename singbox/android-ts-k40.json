@@ -1,7 +1,7 @@
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "debug",
     "timestamp": true
   },
   "ntp": {
@@ -40,6 +40,12 @@
         "server_port": 443,
         "domain_resolver": "DNS-RESOLVER",
         "detour": "Direct"
+      },
+      {
+        "type": "tailscale",
+        "tag": "dns_ts",
+        "endpoint": "ts-ep",
+        "accept_default_resolvers": false
       },
       {
         "type": "udp",
@@ -118,6 +124,14 @@
         "server": "DNS-GOOGLEFCM"
       },
       {
+        "domain_suffix": [
+          ".ts.net",
+          "tail266d4f.ts.net"
+        ],
+        "ip_accept_any": true,
+        "server": "dns_ts"
+      },
+      {
         "query_type": [
           "A",
           "AAAA"
@@ -145,10 +159,10 @@
         "172.18.0.1/30"
       ],
       "auto_route": true,
-      "auto_redirect": true,
       "strict_route": true,
+      "auto_redirect": true,
       "stack": "system",
-      "mtu": 9000,
+      "mtu": 1400,
       "endpoint_independent_nat": true,
       "udp_timeout": "5m",
       "platform": {
@@ -434,6 +448,13 @@
       {
         "clash_mode": "global",
         "outbound": "节点选择"
+      },
+      {
+        "ip_cidr": [
+          "100.64.0.0/10"
+        ],
+        "action": "route",
+        "outbound": "ts-ep"
       },
       {
         "ip_is_private": true,
