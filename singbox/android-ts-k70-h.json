@@ -198,8 +198,7 @@
     {
       "tag": "我的节点",
       "type": "selector",
-      "outbounds": [],
-      "default": "my-claw-jp-vlwn"
+      "outbounds": []
     },
     {
       "tag": "AI专用",
