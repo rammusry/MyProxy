@@ -1,7 +1,8 @@
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "trace",
+    "output": "ts-test.log",
     "timestamp": true
   },
   "ntp": {
@@ -42,26 +43,10 @@
         "detour": "Direct"
       },
       {
-        "type": "udp",
-        "tag": "DNS-GOOGLEFCM",
-        "server": "8.8.8.8",
-        "server_port": 53,
-        "detour": "Google"
-      },
-      {
-        "type": "https",
-        "tag": "DNS-GOOGLE",
-        "server": "cloudflare-dns.com",
-        "server_port": 443,
-        "domain_resolver": "DNS-RESOLVER",
-        "detour": "Google"
-      },
-      {
-        "type": "udp",
-        "tag": "DNS-MICROSOFT",
-        "server": "1.1.1.1",
-        "server_port": 53,
-        "detour": "Microsoft"
+        "type": "tailscale",
+        "tag": "dns_ts",
+        "endpoint": "ts-ep",
+        "accept_default_resolvers": false
       },
       {
         "type": "fakeip",
@@ -93,29 +78,11 @@
         "server": "DNS-DIRECT"
       },
       {
-        "domain_keyword": [
-          "msftconnecttest.com",
-          "msftncsi.com"
+        "domain_suffix": [
+          ".ts.net"
         ],
-        "action": "route",
-        "strategy": "ipv4_only",
-        "server": "DNS-MICROSOFT"
-      },
-      {
-        "domain_keyword": [
-          "googleapis"
-        ],
-        "action": "route",
-        "strategy": "ipv4_only",
-        "server": "DNS-GOOGLE"
-      },
-      {
-        "rule_set": [
-          "GoogleFCM"
-        ],
-        "action": "route",
-        "strategy": "ipv4_only",
-        "server": "DNS-GOOGLEFCM"
+        "ip_accept_any": true,
+        "server": "dns_ts"
       },
       {
         "query_type": [
@@ -145,10 +112,9 @@
         "172.18.0.1/30"
       ],
       "auto_route": true,
-      "auto_redirect": true,
       "strict_route": true,
       "stack": "system",
-      "mtu": 9000,
+      "mtu": 1400,
       "endpoint_independent_nat": true,
       "udp_timeout": "5m",
       "platform": {
@@ -165,129 +131,25 @@
       "tag": "节点选择",
       "type": "selector",
       "outbounds": [
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
-        "Direct"
-      ],
-      "default": "日常使用"
+        "my-claw-jp-vlwn"
+      ]
     },
     {
-      "tag": "日常使用",
-      "type": "urltest",
-      "outbounds": []
-    },
-    {
-      "tag": "我的节点",
-      "type": "selector",
-      "outbounds": [],
-      "default": "my-claw-jp-vlwn"
-    },
-    {
-      "tag": "AI专用",
-      "type": "selector",
-      "outbounds": [
-        "链式代理",
-        "我的节点",
-        "美国精选",
-        "新加坡精选",
-        "日本精选",
-        "其他精选"
-      ],
-      "default": "链式代理"
-    },
-    {
-      "tag": "美国精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "新加坡精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "日本精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "香港精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "台湾精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "其他精选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "Google",
-      "type": "selector",
-      "outbounds": [
-        "节点选择",
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
-        "Direct"
-      ],
-      "default": "节点选择"
-    },
-    {
-      "tag": "Microsoft",
-      "type": "selector",
-      "outbounds": [
-        "节点选择",
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
-        "Direct"
-      ],
-      "default": "Direct"
-    },
-    {
-      "tag": "漏网之鱼",
-      "type": "selector",
-      "outbounds": [
-        "Direct",
-        "节点选择"
-      ],
-      "default": "Direct"
-    },
-    {
-      "tag": "链式代理",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "广告拦截",
-      "type": "selector",
-      "outbounds": [
-        "Reject",
-        "Direct",
-        "节点选择"
-      ],
-      "default": "Reject"
+      "tag": "my-claw-jp-vlwn",
+      "type": "vless",
+      "server": "pycjp.crushry.fun",
+      "server_port": 443,
+      "uuid": "f1c7003c-d3b7-4919-ac9f-4c374e47ad68",
+      "tls": {
+        "enabled": true,
+        "server_name": "pycjp.crushry.fun",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {},
+        "path": "/vlwn"
+      }
     },
     {
       "tag": "Direct",
@@ -436,6 +298,13 @@
         "outbound": "节点选择"
       },
       {
+        "ip_cidr": [
+          "100.64.0.0/10"
+        ],
+        "action": "route",
+        "outbound": "ts-ep"
+      },
+      {
         "ip_is_private": true,
         "action": "route",
         "outbound": "Direct"
@@ -475,16 +344,6 @@
       },
       {
         "rule_set": [
-          "Anthropic",
-          "OpenAI",
-          "Gemini",
-          "ry-rule-pure"
-        ],
-        "action": "route",
-        "outbound": "AI专用"
-      },
-      {
-        "rule_set": [
           "ry-rule-reject",
           "Advertising"
         ],
@@ -502,36 +361,15 @@
       },
       {
         "rule_set": [
-          "GoogleFCM"
-        ],
-        "action": "route",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": [
           "China",
           "ChinaIP",
           "ry-rule-direct"
         ],
         "action": "route",
         "outbound": "Direct"
-      },
-      {
-        "rule_set": [
-          "Google"
-        ],
-        "action": "route",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": [
-          "Microsoft"
-        ],
-        "action": "route",
-        "outbound": "Microsoft"
       }
     ],
-    "final": "漏网之鱼",
+    "final": "Direct",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
@@ -540,7 +378,7 @@
       "type": "tailscale",
       "tag": "ts-ep",
       "auth_key": "",
-      "hostname": "singbox-k40",
+      "hostname": "singbox-k70u",
       "udp_timeout": "5m"
     }
   ]

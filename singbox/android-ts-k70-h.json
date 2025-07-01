@@ -125,7 +125,8 @@
       },
       {
         "domain_suffix": [
-          ".ts.net"
+          ".ts.net",
+          "tail266d4f.ts.net"
         ],
         "ip_accept_any": true,
         "server": "dns_ts"
@@ -551,8 +552,7 @@
       }
     ],
     "final": "漏网之鱼",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    "auto_detect_interface": true
   },
   "endpoints": [
     {
