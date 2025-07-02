@@ -358,4 +358,3 @@ rules:
   - GEOSITE,cn,DIRECT
   - MATCH, 漏网之鱼
 
-proxies: []
