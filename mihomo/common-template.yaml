@@ -58,117 +58,192 @@ dns:
       - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"
 
-# 代理组配置 - 定义策略组结构，substore 会填充节点引用
 proxy-groups:
-  # 功能分组
-  - name: 节点选择
+  # ----------------------------------------------------------------
+  # 🎯 核心入口策略组 (这是规则中主要引用的组)
+  # ----------------------------------------------------------------
+  - name: 🎯 PROXY  
     <<: *p-groups-base
     type: select
     proxies:
-      - 日常使用
-      - 我的节点
-      - 日本精选
-      - 香港精选
-      - 美国精选
-      - 台湾精选
-      - 新加坡精选
-      - 其他精选
+      - ✈️ 普通节点  # 日常使用，速度最快的普通节点
+      - 🚀 自动精选  # 最优但成本略高的选择，速度快或ip好的精选节点
+      - 👆 手动选择  # 进入手动选择模式
+      - 🏠 我的节点  # 自己的VPS
       - DIRECT
-    icon: "https://fyzfly.oss-cn-beijing.aliyuncs.com/img/202409161533607.svg"
 
-  - name: 我的节点
-    <<: *p-groups-base
-    type: select
-    # substore 脚本会通过 use 或 include-all + filter 填充节点
-    proxies: []
-
-  - name: AI专用
-    <<: *p-groups-base
-    type: select
-    proxies:
-      - webshare
-      - 我的节点
-      - 节点选择
-      - 精选节点
-
-  - name: 日常使用
+  # ----------------------------------------------------------------
+  # 📈 自动测速分组 (URL-Test)
+  # ----------------------------------------------------------------
+  - name: ✈️ 普通节点
     <<: *p-groups-base
     type: url-test
-    # substore 脚本会填充日常使用的节点
     proxies: []
     icon: "https://fyzfly.oss-cn-beijing.aliyuncs.com/img/202409161436790.svg"
 
-  - name: 精选节点
-    type: select
+  - name: 🚀 自动精选
     <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  # ----------------------------------------------------------------
+  # 👆 手动选择与区域分组 (Select)
+  # ----------------------------------------------------------------
+  - name: 👆 手动选择
+    <<: *p-groups-base
+    type: select
     proxies:
-      - 美国精选
-      - 日本精选
-      - 新加坡精选
-      - 台湾精选
-      - 香港精选
-      - 其他精选
-      - 节点选择
+      - 🏠 我的节点 
+      - 🇺🇸 美国
+      - 🇯🇵 日本
+      - 🇭🇰 香港
+      - 🇸🇬 新加坡
+      - 🇹🇼 台湾
+      - 🇳🇬 尼日利亚
+      - 🌍 其他地区
 
-  - name: 日本精选
+
+  # --- 各区域具体分组 ---
+  - name: 🇺🇸 美国
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充日本节点
-    proxies: []
+    proxies:
+      - "[Auto] 美国"
 
-  - name: 美国精选
+  - name: 🇯🇵 日本
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充美国节点
-    proxies: []
+    proxies:
+      - "[Auto] 日本"
 
-  - name: 香港精选
+  - name: 🇭🇰 香港
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充香港节点
-    proxies: []
+    proxies:
+      - "[Auto] 香港"
 
-  - name: 新加坡精选
+  - name: 🇸🇬 新加坡
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充新加坡节点
-    proxies: []
+    proxies:
+      - "[Auto] 新加坡"
 
-  - name: 台湾精选
+  - name: 🇹🇼 台湾
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充台湾节点
-    proxies: []
+    proxies:
+      - "[Auto] 台湾"
 
-  - name: 其他精选
+  - name: 🇳🇬 尼日利亚
     <<: *p-groups-base
     type: select
-    # substore 脚本会通过 filter 填充其他地区节点
+    proxies:
+      - "[Auto] 尼日利亚"
+
+  - name: 🌍 其他地区
+    <<: *p-groups-base
+    type: select
+    proxies:
+      - "[Auto] 其他地区"
+
+  # ----------------------------------------------------------------
+
+  - name: "[Auto] 美国"
+    <<: *p-groups-base
+    type: url-test
     proxies: []
 
+  - name: "[Auto] 日本"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  - name: "[Auto] 香港"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+  
+  - name: "[Auto] 新加坡"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  - name: "[Auto] 台湾"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  - name: "[Auto] 尼日利亚"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  - name: "[Auto] 其他地区"
+    <<: *p-groups-base
+    type: url-test
+    proxies: []
+
+  # ----------------------------------------------------------------
+  # 🏠 自建节点与特殊用途分组
+  # ----------------------------------------------------------------
+  - name: 🏠 我的节点
+    <<: *p-groups-base
+    type: select
+    proxies: []
+
+  - name: 🤖 AI 专用
+    <<: *p-groups-base
+    type: select
+    proxies:
+      - webshare 
+      - 🇺🇸 美国
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🇹🇼 台湾
+      - 🌍 其他地区
+      - 🏠 我的节点
+
+  # ----------------------------------------------------------------
+  # 🛡️ 功能性分组
+  # ----------------------------------------------------------------
   - name: 拦截广告
     type: select
     proxies:
       - "REJECT"
       - "DIRECT"
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
+    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/block.svg"
 
   - name: 漏网之鱼
     type: select
     proxies:
       - DIRECT
-      - 节点选择
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"
+      - PROXY 
+    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/fish.svg"
 
 # 规则配置模块 - 包含规则集和路由规则
 # 注意：此模块提供基础的规则集和规则配置
 # substore 脚本可能会覆盖或补充这些配置
 rule-providers:
   # 个人专用
-  ryrules:
+  ry-direct:
     <<: *rules-classical
-    url: "https://gist.githubusercontent.com/Crush-RY/bfeb6c0e292f0ba3d9c60bbb22f32315/raw/ryrule.yaml"
-    path: ./ruleset/ryrules.yaml
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-direct.yaml"
+    path: ./ruleset/ry-direct.yaml
+
+  ry-proxy:
+    <<: *rules-classical
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.yaml"
+    path: ./ruleset/ry-proxy.yaml
+
+  ry-reject:
+    <<: *rules-classical
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.yaml"
+    path: ./ruleset/ry-reject.yaml
+  
+  ry-pure:
+    <<: *rules-classical
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-pure.yaml"
+    path: ./ruleset/ry-pure.yaml
 
   # AI 类
   OpenAI:
@@ -251,21 +326,6 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
     path: ./ruleset/blackmatrix7/Telegram.yaml
 
-  TikTok:
-    <<: *rules-classical
-    path: ./rules/blackmatrix7/TikTok.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml"
-
-  Discord:
-    <<: *rules-classical
-    path: ./rules/blackmatrix7/discord.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml"
-
-  applications:
-    <<: *rules-classical
-    path: ./rules/Loyalsoldier/applications.yaml
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-
   # 游戏类
   Steam:
     type: http
@@ -279,26 +339,20 @@ rule-providers:
 # 请设置域名类规则优先，ip类规则置后！
 rules:
   - PROCESS-NAME,com.talkatone.android,AI专用
-  - PROCESS-NAME,claude.exe,AI专用
-  - PROCESS-NAME,claude,AI专用
-  - RULE-SET,ryrules,DIRECT
-  - DOMAIN-SUFFIX,lunary.site,DIRECT
-  - DOMAIN-SUFFIX,genspark.ai,AI专用
-  - DOMAIN-SUFFIX,poe.com,AI专用
-  - DOMAIN-SUFFIX,you.com,AI专用
-  - DOMAIN-SUFFIX,aistudio.google.com,精选节点
-  - DOMAIN-SUFFIX,perplexity.ai,AI专用
-  - DOMAIN-SUFFIX,linux.do,DIRECT
+  - RULE-SET,ry-direct,DIRECT
+  - RULE-SET,ry-proxy,🎯 PROXY
+  - RULE-SET,ry-reject,广告拦截
+  - RULE-SET,ry-pure,AI专用
   - RULE-SET,OpenAI,AI专用
-  - RULE-SET,Gemini,精选节点
+  - RULE-SET,Gemini,AI专用
   - RULE-SET,Anthropic,AI专用
-  - RULE-SET,Copilot,我的节点
-  - RULE-SET,gfw,节点选择
-  - RULE-SET,proxy,节点选择
-  - RULE-SET,tld-not-cn,节点选择
-  - RULE-SET,ProxyClient,节点选择,no-resolve
-  - RULE-SET,Telegram,节点选择
-  - RULE-SET,Steam,节点选择
+  - RULE-SET,Copilot,AI专用
+  - RULE-SET,gfw,🎯 PROXY
+  - RULE-SET,proxy,🎯 PROXY
+  - RULE-SET,tld-not-cn,🎯 PROXY
+  - RULE-SET,ProxyClient,🎯 PROXY,no-resolve
+  - RULE-SET,Telegram,🎯 PROXY
+  - RULE-SET,Steam,🎯 PROXY
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
   - RULE-SET,cncidr,DIRECT,no-resolve

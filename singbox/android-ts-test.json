@@ -572,7 +572,7 @@
       "type": "tailscale",
       "tag": "ts-ep",
       "auth_key": "",
-      "hostname": "singbox-k70u",
+      "hostname": "singbox-k70",
       "udp_timeout": "5m"
     }
   ]
