@@ -562,7 +562,7 @@
           "ry-rule-pure"
         ],
         "action": "route",
-        "outbound": "AI专用"
+        "outbound": "🤖 AI专用"
       },
       {
         "rule_set": [
