@@ -232,7 +232,7 @@
     },
     {
       "tag": "🇺🇸 美国",
-      "type": "select",
+      "type": "selector",
       "outbounds": [
         "[Auto] 美国"
       ]
