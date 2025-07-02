@@ -408,7 +408,7 @@ rules:
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - RULE-SET,ry-direct,DIRECT
   - RULE-SET,ry-proxy,🎯 PROXY
-  - RULE-SET,ry-reject,广告拦截
+  - RULE-SET,ry-reject,拦截广告
   - RULE-SET,ry-pure,🤖 AI 专用
   - RULE-SET,OpenAI,🤖 AI 专用
   - RULE-SET,Gemini,🤖 AI 专用
@@ -424,7 +424,6 @@ rules:
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
   - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
-  - RULE-SET,applications,DIRECT
   - RULE-SET,Advertising,拦截广告
   - GEOSITE,cn,DIRECT
   - MATCH, 漏网之鱼
