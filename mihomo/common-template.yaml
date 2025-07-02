@@ -25,14 +25,6 @@ rules-classical: &rules-classical
   interval: 86400
   behavior: classical
 
-# 代理组基础配置锚点
-p-groups-base: &p-groups-base
-  interval: 86400
-  timeout: 3000
-  url: "https://www.gstatic.com/generate_204"
-  lazy: true
-  max-failed-times: 3
-
 # DNS配置模块 - 白名单模式
 dns:
   enable: true
@@ -63,7 +55,11 @@ proxy-groups:
   # 🎯 核心入口策略组 (这是规则中主要引用的组)
   # ----------------------------------------------------------------
   - name: 🎯 PROXY  
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies:
       - ✈️ 普通节点  # 日常使用，速度最快的普通节点
@@ -76,13 +72,21 @@ proxy-groups:
   # 📈 自动测速分组 (URL-Test)
   # ----------------------------------------------------------------
   - name: ✈️ 普通节点
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
     icon: "https://fyzfly.oss-cn-beijing.aliyuncs.com/img/202409161436790.svg"
 
   - name: 🚀 自动精选
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
@@ -90,7 +94,10 @@ proxy-groups:
   # 👆 手动选择与区域分组 (Select)
   # ----------------------------------------------------------------
   - name: 👆 手动选择
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
     type: select
     proxies:
       - 🏠 我的节点 
@@ -105,77 +112,133 @@ proxy-groups:
 
   # --- 各区域具体分组 ---
   - name: 🇺🇸 美国
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
   - name: 🇯🇵 日本
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
   - name: 🇭🇰 香港
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
 
   - name: 🇸🇬 新加坡
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
 
   - name: 🇹🇼 台湾
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
 
   - name: 🇳🇬 尼日利亚
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
   - name: 🌍 其他地区
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
   # ----------------------------------------------------------------
 
   - name: "[Auto] 美国"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
   - name: "[Auto] 日本"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
   - name: "[Auto] 香港"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
   
   - name: "[Auto] 新加坡"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
   - name: "[Auto] 台湾"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
   - name: "[Auto] 尼日利亚"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
   - name: "[Auto] 其他地区"
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: url-test
     proxies: []
 
@@ -183,12 +246,20 @@ proxy-groups:
   # 🏠 自建节点与特殊用途分组
   # ----------------------------------------------------------------
   - name: 🏠 我的节点
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies: []
 
   - name: 🤖 AI 专用
-    <<: *p-groups-base
+    interval: 86400
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
     type: select
     proxies:
       - webshare 
