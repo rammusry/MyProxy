@@ -1,7 +1,7 @@
 {
   "log": {
     "disabled": false,
-    "level": "debug",
+    "level": "warn",
     "timestamp": true
   },
   "ntp": {
@@ -31,7 +31,7 @@
         "server": "cloudflare-dns.com",
         "server_port": 443,
         "domain_resolver": "DNS-RESOLVER",
-        "detour": "节点选择"
+        "detour": "🎯 PROXY"
       },
       {
         "type": "https",
@@ -160,7 +160,6 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "auto_redirect": true,
       "stack": "system",
       "mtu": 1400,
       "endpoint_independent_nat": true,
@@ -176,106 +175,166 @@
   ],
   "outbounds": [
     {
-      "tag": "节点选择",
+      "tag": "🎯 PROXY",
       "type": "selector",
       "outbounds": [
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
+        "✈️ 普通节点",
+        "👆 手动选择",
+        "🚀 自动精选",
+        "🏠 我的节点",
         "Direct"
       ],
-      "default": "日常使用"
+      "default": "✈️ 普通节点"
     },
     {
-      "tag": "日常使用",
+      "tag": "✈️ 普通节点",
       "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "我的节点",
+      "tag": "🏠 我的节点",
       "type": "selector",
       "outbounds": [],
-      "default": "my-claw-jp-reality"
+      "default": "my-claw-jp-vlwn"
     },
     {
-      "tag": "AI专用",
+      "tag": "🤖 AI专用",
       "type": "selector",
       "outbounds": [
         "链式代理",
-        "我的节点",
-        "美国精选",
-        "新加坡精选",
-        "日本精选",
-        "其他精选"
+        "🇺🇸 美国",
+        "🇯🇵 日本",
+        "🇸🇬 新加坡",
+        "🇹🇼 台湾",
+        "🌍 其他地区",
+        "🏠 我的节点"
       ],
       "default": "链式代理"
     },
     {
-      "tag": "美国精选",
+      "tag": "👆 手动选择",
       "type": "selector",
+      "outbounds": [
+        "🇺🇸 美国",
+        "🇯🇵 日本",
+        "🇭🇰 香港",
+        "🇸🇬 新加坡",
+        "🇹🇼 台湾",
+        "🇳🇬 尼日利亚",
+        "🌍 其他地区"
+      ],
+      "default": "🇺🇸 美国"
+    },
+    {
+      "tag": "🚀 自动精选",
+      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "新加坡精选",
+      "tag": "🇺🇸 美国",
+      "type": "select",
+      "outbounds": [
+        "[Auto] 美国"
+      ]
+    },
+    {
+      "tag": "🇯🇵 日本",
       "type": "selector",
+      "outbounds": [
+        "[Auto] 日本"
+      ]
+    },
+    {
+      "tag": "🇸🇬 新加坡",
+      "type": "selector",
+      "outbounds": [
+        "[Auto] 新加坡"
+      ]
+    },
+    {
+      "tag": "🇹🇼 台湾",
+      "type": "selector",
+      "outbounds": [
+        "Auto 台湾"
+      ]
+    },
+    {
+      "tag": "🇳🇬 尼日利亚",
+      "type": "selector",
+      "outbounds": [
+        "[Auto] 尼日利亚"
+      ]
+    },
+    {
+      "tag": "🌍 其他地区",
+      "type": "selector",
+      "outbounds": [
+        "[Auto] 其他地区"
+      ]
+    },
+    {
+      "tag": "🇭🇰 香港",
+      "type": "selector",
+      "outbounds": [
+        "[Auto] 香港"
+      ]
+    },
+    {
+      "tag": "[Auto] 美国",
+      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "日本精选",
-      "type": "selector",
+      "tag": "[Auto] 日本",
+      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "香港精选",
-      "type": "selector",
+      "tag": "[Auto] 新加坡",
+      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "台湾精选",
-      "type": "selector",
+      "tag": "[Auto] 香港",
+      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "其他精选",
-      "type": "selector",
+      "tag": "[Auto] 台湾",
+      "type": "urltest",
+      "outbounds": []
+    },
+    {
+      "tag": "[Auto] 尼日利亚",
+      "type": "urltest",
+      "outbounds": []
+    },
+    {
+      "tag": "[Auto] 其他地区",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "Google",
       "type": "selector",
       "outbounds": [
-        "节点选择",
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
-        "Direct"
+        "🎯 PROXY",
+        "✈️ 普通节点",
+        "🚀 自动精选",
+        "👆 手动选择",
+        "🏠 我的节点"
       ],
-      "default": "节点选择"
+      "default": "🎯 PROXY"
     },
     {
       "tag": "Microsoft",
       "type": "selector",
       "outbounds": [
-        "节点选择",
-        "日常使用",
-        "我的节点",
-        "日本精选",
-        "香港精选",
-        "台湾精选",
-        "新加坡精选",
-        "美国精选",
-        "其他精选",
-        "Direct"
+        "🎯 PROXY",
+        "✈️ 普通节点",
+        "🚀 自动精选",
+        "👆 手动选择",
+        "🏠 我的节点"
       ],
       "default": "Direct"
     },
@@ -284,7 +343,7 @@
       "type": "selector",
       "outbounds": [
         "Direct",
-        "节点选择"
+        "🎯 PROXY"
       ],
       "default": "Direct"
     },
@@ -299,7 +358,7 @@
       "outbounds": [
         "Reject",
         "Direct",
-        "节点选择"
+        "🎯 PROXY"
       ],
       "default": "Reject"
     },
@@ -323,105 +382,105 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-direct.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "ry-rule-proxy",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "ry-rule-pure",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-pure.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "ry-rule-reject",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/China/China.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "ChinaIP",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaIPs/ChinaIPs.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Proxy/Proxy.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "GoogleFCM",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleFCM/GoogleFCM.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Google",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Google/Google.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Anthropic",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Anthropic/Anthropic.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "OpenAI",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Gemini",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       },
       {
         "tag": "Advertising",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/AdvertisingLite/AdvertisingLite.srs",
-        "download_detour": "节点选择"
+        "download_detour": "🎯 PROXY"
       }
     ],
     "rules": [
@@ -447,7 +506,7 @@
       },
       {
         "clash_mode": "global",
-        "outbound": "节点选择"
+        "outbound": "🎯 PROXY"
       },
       {
         "ip_cidr": [
@@ -519,7 +578,7 @@
           "ry-rule-proxy"
         ],
         "action": "route",
-        "outbound": "节点选择"
+        "outbound": "🎯 PROXY"
       },
       {
         "rule_set": [
@@ -553,8 +612,7 @@
       }
     ],
     "final": "漏网之鱼",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    "auto_detect_interface": true
   },
   "endpoints": [
     {
