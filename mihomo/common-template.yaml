@@ -284,7 +284,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - PROXY 
+      - 🎯 PROXY
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/fish.svg"
 
 # 规则配置模块 - 包含规则集和路由规则
@@ -405,15 +405,15 @@ rule-providers:
 # 路由规则配置
 # 请设置域名类规则优先，ip类规则置后！
 rules:
-  - PROCESS-NAME,com.talkatone.android,AI专用
+  - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - RULE-SET,ry-direct,DIRECT
   - RULE-SET,ry-proxy,🎯 PROXY
   - RULE-SET,ry-reject,广告拦截
-  - RULE-SET,ry-pure,AI专用
-  - RULE-SET,OpenAI,AI专用
-  - RULE-SET,Gemini,AI专用
-  - RULE-SET,Anthropic,AI专用
-  - RULE-SET,Copilot,AI专用
+  - RULE-SET,ry-pure,🤖 AI 专用
+  - RULE-SET,OpenAI,🤖 AI 专用
+  - RULE-SET,Gemini,🤖 AI 专用
+  - RULE-SET,Anthropic,🤖 AI 专用
+  - RULE-SET,Copilot,🤖 AI 专用
   - RULE-SET,gfw,🎯 PROXY
   - RULE-SET,proxy,🎯 PROXY
   - RULE-SET,tld-not-cn,🎯 PROXY
