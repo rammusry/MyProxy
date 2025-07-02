@@ -357,4 +357,3 @@ rules:
   - RULE-SET,Advertising,拦截广告
   - GEOSITE,cn,DIRECT
   - MATCH, 漏网之鱼
-
