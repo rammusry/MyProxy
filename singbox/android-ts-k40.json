@@ -541,6 +541,20 @@
         "no_drop": false
       },
       {
+        "package_name": [
+          "com.talkatone.android"
+        ],
+        "action": "route",
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "package_name": [
+          "com.mypaga.cutomer"
+        ],
+        "action": "route",
+        "outbound": "🇳🇬 尼日利亚"
+      },
+      {
         "domain": [
           "ntp.aliyun.com"
         ],
