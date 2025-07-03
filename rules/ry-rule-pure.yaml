@@ -2,5 +2,3 @@ payload:
   - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,genspark.ai
   - DOMAIN-SUFFIX,aistudio.google.com
-  - PROCESS-NAME,com.talkatone.android
-  - DOMAIN-SUFFIX,tktn.be
