@@ -82,7 +82,7 @@ proxy-groups:
     icon: "https://fyzfly.oss-cn-beijing.aliyuncs.com/img/202409161436790.svg"
 
   - name: 🚀 自动精选
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -94,7 +94,7 @@ proxy-groups:
   # 👆 手动选择与区域分组 (Select)
   # ----------------------------------------------------------------
   - name: 👆 手动选择
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -112,7 +112,7 @@ proxy-groups:
 
   # --- 各区域具体分组 ---
   - name: 🇺🇸 美国
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -121,7 +121,7 @@ proxy-groups:
     proxies: []
 
   - name: 🇯🇵 日本
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -130,7 +130,7 @@ proxy-groups:
     proxies: []
 
   - name: 🇭🇰 香港
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -140,7 +140,7 @@ proxy-groups:
 
 
   - name: 🇸🇬 新加坡
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -150,7 +150,7 @@ proxy-groups:
 
 
   - name: 🇹🇼 台湾
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -160,7 +160,7 @@ proxy-groups:
 
 
   - name: 🇳🇬 尼日利亚
-    interval: 86400
+    interval: 30000
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -180,7 +180,7 @@ proxy-groups:
   # ----------------------------------------------------------------
 
   - name: "[Auto] 美国"
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -189,7 +189,7 @@ proxy-groups:
     proxies: []
 
   - name: "[Auto] 日本"
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -198,7 +198,7 @@ proxy-groups:
     proxies: []
 
   - name: "[Auto] 香港"
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -207,7 +207,7 @@ proxy-groups:
     proxies: []
   
   - name: "[Auto] 新加坡"
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -216,7 +216,7 @@ proxy-groups:
     proxies: []
 
   - name: "[Auto] 台湾"
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -246,7 +246,7 @@ proxy-groups:
   # 🏠 自建节点与特殊用途分组
   # ----------------------------------------------------------------
   - name: 🏠 我的节点
-    interval: 86400
+    interval: 3000
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -255,7 +255,7 @@ proxy-groups:
     proxies: []
 
   - name: 🤖 AI 专用
-    interval: 86400
+    interval: 3000
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
