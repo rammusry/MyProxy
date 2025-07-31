@@ -549,6 +549,13 @@
       },
       {
         "package_name": [
+          "kr.co.vcnc.android.couple"
+        ],
+        "action": "route",
+        "outbound": "🎯 PROXY"
+      },
+      {
+        "package_name": [
           "com.mypaga.cutomer"
         ],
         "action": "route",
