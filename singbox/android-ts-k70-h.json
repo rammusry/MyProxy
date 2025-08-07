@@ -587,6 +587,13 @@
       },
       {
         "rule_set": [
+          "ry-rule-selector"
+        ],
+        "action": "route",
+        "outbound": "👆 手动选择"
+      },
+      {
+        "rule_set": [
           "ry-rule-reject",
           "Advertising"
         ],

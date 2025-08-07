@@ -494,6 +494,27 @@
         "no_drop": false
       },
       {
+        "package_name": [
+          "com.talkatone.android"
+        ],
+        "action": "route",
+        "outbound": "🇺🇸 美国"
+      },
+      {
+        "package_name": [
+          "kr.co.vcnc.android.couple"
+        ],
+        "action": "route",
+        "outbound": "🎯 PROXY"
+      },
+      {
+        "package_name": [
+          "com.mypaga.cutomer"
+        ],
+        "action": "route",
+        "outbound": "🇳🇬 尼日利亚"
+      },
+      {
         "domain": [
           "ntp.aliyun.com"
         ],
@@ -515,7 +536,14 @@
           "ry-rule-pure"
         ],
         "action": "route",
-        "outbound": "AI专用"
+        "outbound": "🤖 AI专用"
+      },
+      {
+        "rule_set": [
+          "ry-rule-selector"
+        ],
+        "action": "route",
+        "outbound": "👆 手动选择"
       },
       {
         "rule_set": [

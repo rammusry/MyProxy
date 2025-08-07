@@ -302,6 +302,11 @@ rule-providers:
     url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.yaml"
     path: ./ruleset/ry-proxy.yaml
 
+  ry-selector:
+    <<: *rules-classical
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-selector.yaml"
+    path: ./ruleset/ry-selector.yaml
+
   ry-reject:
     <<: *rules-classical
     url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.yaml"
