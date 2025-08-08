@@ -103,7 +103,13 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     type: url-test
-    proxies: []
+    proxies: 
+      - 🚗 Auto-精品
+      - 🇭🇰 港-精品
+      - 🇺🇸 美-精品
+      - 🇯🇵 日-精品
+      - 🇸🇬 新-精品
+      - 🇹🇼 台-精品
 
   - name: 🛬 落地节点
     interval: 300
@@ -112,13 +118,13 @@ proxy-groups:
     lazy: true
     type: select
     proxies:
-      - 🏠 我的节点 
       - 🇺🇸 美-落地
       - 🇯🇵 日-落地
       - 🇸🇬 新-落地
       - 🇹🇼 台-落地
       - 🇳🇬 尼-落地
       - 🌍 其他地区
+      - 🏠 我的节点 
 
   - name: 🏠 我的节点
     interval: 3000
@@ -148,16 +154,6 @@ proxy-groups:
     type: select
     proxies: []
 
-  - name: 🇭🇰 港-落地
-    interval: 300
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-
   - name: 🇸🇬 新-落地
     interval: 300
     timeout: 500
@@ -167,7 +163,6 @@ proxy-groups:
     type: select
     proxies: []
 
-
   - name: 🇹🇼 台-落地
     interval: 300
     timeout: 500
@@ -176,7 +171,6 @@ proxy-groups:
     max-failed-times: 3
     type: select
     proxies: []
-
 
   - name: 🇳🇬 尼-落地
     interval: 30000
@@ -197,8 +191,7 @@ proxy-groups:
     proxies: []
 
   # ----------------------------------------------------------------
-
-  - name: "🇺🇸 美-精品"
+  - name: 🚗 Auto-精品
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -207,7 +200,7 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "🇯🇵 日-精品"
+  - name: 🇭🇰 港-精品
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -216,7 +209,25 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "🇸🇬 新-精品"
+  - name: 🇺🇸 美-精品
+    interval: 300
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: url-test
+    proxies: []
+
+  - name: 🇯🇵 日-精品
+    interval: 300
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: url-test
+    proxies: []
+
+  - name: 🇸🇬 新-精品
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -225,7 +236,7 @@ proxy-groups:
     type: url-test
     proxies: []
   
-  - name: "🇹🇼 台-精品"
+  - name: 🇹🇼 台-精品
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -233,16 +244,6 @@ proxy-groups:
     max-failed-times: 3
     type: url-test
     proxies: []
-
-  - name: "🇭🇰 港-精品"
-    interval: 300
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: url-test
-    proxies: []
-
 
   # ----------------------------------------------------------------
   # 🛡️ 功能性分组
