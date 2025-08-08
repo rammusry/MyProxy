@@ -254,14 +254,12 @@ proxy-groups:
       - REJECT
       - 🎯 PROXY 
       - DIRECT
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/block.svg"
 
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - DIRECT
       - 🎯 PROXY
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/fish.svg"
 
 # 规则配置模块 - 包含规则集和路由规则
 # 注意：此模块提供基础的规则集和规则配置

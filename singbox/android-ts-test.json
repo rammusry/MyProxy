@@ -249,32 +249,32 @@
     },
     {
       "tag": "🚗 Auto-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇭🇰 港-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇺🇸 美-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇯🇵 日-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇸🇬 新-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇹🇼 台-精品",
-      "type": "url-test",
+      "type": "urltest",
       "outbounds": []
     },
     {
