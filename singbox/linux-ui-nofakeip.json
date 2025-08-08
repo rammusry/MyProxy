@@ -354,6 +354,13 @@
         "download_detour": "🎯 PROXY"
       },
       {
+        "tag": "ry-rule-selector",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-selector.srs",
+        "download_detour": "🎯 PROXY"
+      },
+      {
         "tag": "ry-rule-pure",
         "type": "remote",
         "format": "binary",
