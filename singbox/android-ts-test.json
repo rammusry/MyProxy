@@ -214,8 +214,7 @@
     {
       "tag": "🏠 我的节点",
       "type": "selector",
-      "outbounds": [],
-      "default": "my-claw-jp-reality"
+      "outbounds": []
     },
     {
       "tag": "🇺🇸 美-落地",
