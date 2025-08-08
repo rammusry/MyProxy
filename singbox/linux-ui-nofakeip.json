@@ -35,7 +35,7 @@
         "server": "cloudflare-dns.com",
         "server_port": 443,
         "domain_resolver": "DNS-RESOLVER",
-        "detour": "节点选择"
+        "detour": "🎯 PROXY"
       },
       {
         "type": "https",
@@ -155,16 +155,83 @@
       "tag": "🎯 PROXY",
       "type": "selector",
       "outbounds": [
-        "✈️ 普通节点",
-        "👆 手动选择",
-        "🚀 自动精选",
+        "💸 经济节点",
+        "✨ 精品线路",
+        "🛬 落地节点",
         "🏠 我的节点",
         "Direct"
       ],
-      "default": "✈️ 普通节点"
+      "default": "💸 经济节点"
     },
     {
-      "tag": "✈️ 普通节点",
+      "tag": "🤖 AI专用",
+      "type": "selector",
+      "outbounds": [
+        "链式代理",
+        "🇺🇸 美-落地",
+        "🇺🇸 美-精品",
+        "🇯🇵 日-落地",
+        "🇯🇵 日-精品",
+        "🇸🇬 新-落地",
+        "🇸🇬 新-精品",
+        "🇹🇼 台-落地",
+        "🇹🇼 台-精品",
+        "🏠 我的节点"
+      ],
+      "default": "链式代理"
+    },
+    {
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "🎯 PROXY",
+        "💸 经济节点",
+        "✨ 精品线路",
+        "🛬 落地节点",
+        "🏠 我的节点"
+      ],
+      "default": "🎯 PROXY"
+    },
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "🎯 PROXY",
+        "💸 经济节点",
+        "✨ 精品线路",
+        "🛬 落地节点",
+        "🏠 我的节点",
+        "Direct"
+      ],
+      "default": "Direct"
+    },
+    {
+      "tag": "🛬 落地节点",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸 美-落地",
+        "🇯🇵 日-落地",
+        "🇸🇬 新-落地",
+        "🇹🇼 台-落地",
+        "🇳🇬 尼-落地",
+        "🌍 其他地区"
+      ],
+      "default": "🇺🇸 美-落地"
+    },
+    {
+      "tag": "✨ 精品线路",
+      "type": "selector",
+      "outbounds": [
+        "[Auto] 精品",
+        "🇭🇰 港-精品",
+        "🇯🇵 日-精品",
+        "🇹🇼 台-精品",
+        "🇸🇬 新-精品",
+        "🇺🇸 美-精品"
+      ]
+    },
+    {
+      "tag": "💸 经济节点",
       "type": "urltest",
       "outbounds": []
     },
@@ -175,149 +242,62 @@
       "default": "my-claw-jp-reality"
     },
     {
-      "tag": "🤖 AI专用",
+      "tag": "🇺🇸 美-落地",
       "type": "selector",
-      "outbounds": [
-        "链式代理",
-        "🇺🇸 美国",
-        "🇯🇵 日本",
-        "🇸🇬 新加坡",
-        "🇹🇼 台湾",
-        "🌍 其他地区",
-        "🏠 我的节点"
-      ],
-      "default": "链式代理"
-    },
-    {
-      "tag": "👆 手动选择",
-      "type": "selector",
-      "outbounds": [
-        "🇺🇸 美国",
-        "🇯🇵 日本",
-        "🇭🇰 香港",
-        "🇸🇬 新加坡",
-        "🇹🇼 台湾",
-        "🇳🇬 尼日利亚",
-        "🌍 其他地区"
-      ],
-      "default": "🇺🇸 美国"
-    },
-    {
-      "tag": "🚀 自动精选",
-      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "🇺🇸 美国",
+      "tag": "🇯🇵 日-落地",
       "type": "selector",
-      "outbounds": [
-        "[Auto] 美国"
-      ]
+      "outbounds": []
     },
     {
-      "tag": "🇯🇵 日本",
+      "tag": "🇸🇬 新-落地",
       "type": "selector",
-      "outbounds": [
-        "[Auto] 日本"
-      ]
+      "outbounds": []
     },
     {
-      "tag": "🇸🇬 新加坡",
+      "tag": "🇹🇼 台-落地",
       "type": "selector",
-      "outbounds": [
-        "[Auto] 新加坡"
-      ]
+      "outbounds": []
     },
     {
-      "tag": "🇹🇼 台湾",
+      "tag": "🇳🇬 尼-落地",
       "type": "selector",
-      "outbounds": [
-        "[Auto] 台湾"
-      ]
-    },
-    {
-      "tag": "🇳🇬 尼日利亚",
-      "type": "selector",
-      "outbounds": [
-        "[Auto] 尼日利亚"
-      ]
+      "outbounds": []
     },
     {
       "tag": "🌍 其他地区",
       "type": "selector",
-      "outbounds": [
-        "[Auto] 其他地区"
-      ]
-    },
-    {
-      "tag": "🇭🇰 香港",
-      "type": "selector",
-      "outbounds": [
-        "[Auto] 香港"
-      ]
-    },
-    {
-      "tag": "[Auto] 美国",
-      "type": "urltest",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 日本",
-      "type": "urltest",
+      "tag": "🇭🇰 港-精品",
+      "type": "url-test",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 新加坡",
-      "type": "urltest",
+      "tag": "🇺🇸 美-精品",
+      "type": "url-test",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 香港",
-      "type": "urltest",
+      "tag": "🇯🇵 日-精品",
+      "type": "url-test",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 台湾",
-      "type": "urltest",
+      "tag": "🇸🇬 新-精品",
+      "type": "url-test",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 尼日利亚",
-      "type": "urltest",
+      "tag": "🇹🇼 台-精品",
+      "type": "url-test",
       "outbounds": []
     },
     {
-      "tag": "[Auto] 其他地区",
-      "type": "urltest",
-      "outbounds": []
-    },
-    {
-      "tag": "Google",
-      "type": "selector",
-      "outbounds": [
-        "🎯 PROXY",
-        "✈️ 普通节点",
-        "🚀 自动精选",
-        "👆 手动选择",
-        "🏠 我的节点"
-      ],
-      "default": "🎯 PROXY"
-    },
-    {
-      "tag": "Microsoft",
-      "type": "selector",
-      "outbounds": [
-        "🎯 PROXY",
-        "✈️ 普通节点",
-        "🚀 自动精选",
-        "👆 手动选择",
-        "🏠 我的节点",
-        "Direct"
-      ],
-      "default": "Direct"
-    },
-    {
-      "tag": "漏网之鱼",
+      "tag": "🐟 漏网之鱼",
       "type": "selector",
       "outbounds": [
         "Direct",
@@ -331,7 +311,7 @@
       "outbounds": []
     },
     {
-      "tag": "广告拦截",
+      "tag": "🚫 广告拦截",
       "type": "selector",
       "outbounds": [
         "Reject",
@@ -522,7 +502,7 @@
           "com.talkatone.android"
         ],
         "action": "route",
-        "outbound": "🇺🇸 美国"
+        "outbound": "🇺🇸 美-落地"
       },
       {
         "package_name": [
@@ -536,7 +516,7 @@
           "com.mypaga.cutomer"
         ],
         "action": "route",
-        "outbound": "🇳🇬 尼日利亚"
+        "outbound": "🇳🇬 尼-落地"
       },
       {
         "domain": [
@@ -567,16 +547,15 @@
           "ry-rule-selector"
         ],
         "action": "route",
-        "outbound": "👆 手动选择"
+        "outbound": "✨ 精品线路"
       },
       {
         "rule_set": [
           "ry-rule-reject",
           "Advertising"
         ],
-        "action": "reject",
-        "method": "default",
-        "no_drop": false
+        "action": "route",
+        "outbound": "🚫 广告拦截"
       },
       {
         "rule_set": [
@@ -617,7 +596,7 @@
         "outbound": "Microsoft"
       }
     ],
-    "final": "漏网之鱼",
+    "final": "🐟 漏网之鱼",
     "auto_detect_interface": true
   }
 }

@@ -52,36 +52,51 @@ dns:
 
 proxy-groups:
   # ----------------------------------------------------------------
-  # 🎯 核心入口策略组 (这是规则中主要引用的组)
+  # 🎯 核心入口策略组 
   # ----------------------------------------------------------------
   - name: 🎯 PROXY  
-    interval: 86400
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
     type: select
     proxies:
-      - ✈️ 普通节点  # 日常使用，速度最快的普通节点
-      - 🚀 自动精选  # 最优但成本略高的选择，速度快或ip好的精选节点
-      - 👆 手动选择  # 进入手动选择模式
-      - 🏠 我的节点  # 自己的VPS
+      - 💸 经济节点  
+      - ✨ 精品线路 
+      - 🛬 落地节点  
+      - 🏠 我的节点 
       - DIRECT
 
-  # ----------------------------------------------------------------
-  # 📈 自动测速分组 (URL-Test)
-  # ----------------------------------------------------------------
-  - name: ✈️ 普通节点
-    interval: 86400
+  - name: 🤖 AI 专用
+    interval: 3000
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies:
+      - webshare 
+      - 🇺🇸 美-落地
+      - 🇺🇸 美-精品
+      - 🇯🇵 日-落地
+      - 🇯🇵 日-精品
+      - 🇸🇬 新-落地
+      - 🇸🇬 新-精品
+      - 🇹🇼 台-落地
+      - 🇹🇼 台-精品
+      - 🏠 我的节点
+
+  - name: 💸 经济节点
+    interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
     type: url-test
     proxies: []
-    icon: "https://fyzfly.oss-cn-beijing.aliyuncs.com/img/202409161436790.svg"
-
-  - name: 🚀 自动精选
+   
+  - name: ✨ 精品线路
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -90,10 +105,7 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  # ----------------------------------------------------------------
-  # 👆 手动选择与区域分组 (Select)
-  # ----------------------------------------------------------------
-  - name: 👆 手动选择
+  - name: 🛬 落地节点
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -101,17 +113,24 @@ proxy-groups:
     type: select
     proxies:
       - 🏠 我的节点 
-      - 🇺🇸 美国
-      - 🇯🇵 日本
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡
-      - 🇹🇼 台湾
-      - 🇳🇬 尼日利亚
+      - 🇺🇸 美-落地
+      - 🇯🇵 日-落地
+      - 🇸🇬 新-落地
+      - 🇹🇼 台-落地
+      - 🇳🇬 尼-落地
       - 🌍 其他地区
 
+  - name: 🏠 我的节点
+    interval: 3000
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
 
   # --- 各区域具体分组 ---
-  - name: 🇺🇸 美国
+  - name: 🇺🇸 美-落地
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -120,7 +139,7 @@ proxy-groups:
     type: select
     proxies: []
 
-  - name: 🇯🇵 日本
+  - name: 🇯🇵 日-落地
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -129,17 +148,7 @@ proxy-groups:
     type: select
     proxies: []
 
-  - name: 🇭🇰 香港
-    interval: 300
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-
-  - name: 🇸🇬 新加坡
+  - name: 🇭🇰 港-落地
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -149,7 +158,7 @@ proxy-groups:
     proxies: []
 
 
-  - name: 🇹🇼 台湾
+  - name: 🇸🇬 新-落地
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -159,7 +168,17 @@ proxy-groups:
     proxies: []
 
 
-  - name: 🇳🇬 尼日利亚
+  - name: 🇹🇼 台-落地
+    interval: 300
+    timeout: 500
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+
+  - name: 🇳🇬 尼-落地
     interval: 30000
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -179,7 +198,7 @@ proxy-groups:
 
   # ----------------------------------------------------------------
 
-  - name: "[Auto] 美国"
+  - name: "🇺🇸 美-精品"
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -188,7 +207,7 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "[Auto] 日本"
+  - name: "🇯🇵 日-精品"
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -197,7 +216,7 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "[Auto] 香港"
+  - name: "🇸🇬 新-精品"
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -206,7 +225,7 @@ proxy-groups:
     type: url-test
     proxies: []
   
-  - name: "[Auto] 新加坡"
+  - name: "🇹🇼 台-精品"
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -215,7 +234,7 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "[Auto] 台湾"
+  - name: "🇭🇰 港-精品"
     interval: 300
     timeout: 500
     url: "https://www.gstatic.com/generate_204"
@@ -224,63 +243,19 @@ proxy-groups:
     type: url-test
     proxies: []
 
-  - name: "[Auto] 尼日利亚"
-    interval: 86400
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: url-test
-    proxies: []
-
-  - name: "[Auto] 其他地区"
-    interval: 86400
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: url-test
-    proxies: []
-
-  # ----------------------------------------------------------------
-  # 🏠 自建节点与特殊用途分组
-  # ----------------------------------------------------------------
-  - name: 🏠 我的节点
-    interval: 3000
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🤖 AI 专用
-    interval: 3000
-    timeout: 500
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies:
-      - webshare 
-      - 🇺🇸 美国
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡
-      - 🇹🇼 台湾
-      - 🌍 其他地区
-      - 🏠 我的节点
 
   # ----------------------------------------------------------------
   # 🛡️ 功能性分组
   # ----------------------------------------------------------------
-  - name: 拦截广告
+  - name: 🚫 广告拦截
     type: select
     proxies:
-      - "REJECT"
-      - "DIRECT"
+      - REJECT
+      - 🎯 PROXY 
+      - DIRECT
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io/main/docs/assets/icons/block.svg"
 
-  - name: 漏网之鱼
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
       - DIRECT
@@ -412,8 +387,9 @@ rule-providers:
 rules:
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - RULE-SET,ry-direct,DIRECT
+  - RULE-SET,ry-selector,✨ 精品线路
   - RULE-SET,ry-proxy,🎯 PROXY
-  - RULE-SET,ry-reject,拦截广告
+  - RULE-SET,ry-reject,🚫 广告拦截
   - RULE-SET,ry-pure,🤖 AI 专用
   - RULE-SET,OpenAI,🤖 AI 专用
   - RULE-SET,Gemini,🤖 AI 专用
@@ -429,6 +405,6 @@ rules:
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
   - RULE-SET,cncidr,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
-  - RULE-SET,Advertising,拦截广告
+  - RULE-SET,Advertising,🚫 广告拦截
   - GEOSITE,cn,DIRECT
-  - MATCH, 漏网之鱼
+  - MATCH, 🐟 漏网之鱼
