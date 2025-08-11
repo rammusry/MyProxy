@@ -1,7 +1,7 @@
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "debug",
     "timestamp": true
   },
   "ntp": {
@@ -160,6 +160,7 @@
       ],
       "auto_route": true,
       "strict_route": true,
+      "auto_redirect": true,
       "stack": "system",
       "mtu": 1400,
       "endpoint_independent_nat": true,
@@ -374,13 +375,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.srs",
-        "download_detour": "🎯 PROXY"
-      },
-      {
-        "tag": "ry-rule-selector",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-selector.srs",
         "download_detour": "🎯 PROXY"
       },
       {
@@ -631,7 +625,8 @@
       }
     ],
     "final": "🐟 漏网之鱼",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "override_android_vpn": true
   },
   "endpoints": [
     {
