@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "domain_suffix": [
+        ".aistudio.google.com",
+        ".genspark.ai",
+        ".perplexity.ai"
+      ]
+    }
+  ],
+  "version": 1
+}
