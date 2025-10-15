@@ -1,11 +1,15 @@
 {
   "rules": [
     {
+      "domain_keyword": [
+        "notebooklm.google"
+      ]
+    },
+    {
       "domain_suffix": [
         ".aistudio.google.com",
         ".genspark.ai",
         ".grok.com",
-        ".notebooklm.google.com",
         ".perplexity.ai"
       ]
     }
