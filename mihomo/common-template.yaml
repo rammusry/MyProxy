@@ -341,6 +341,12 @@ rule-providers:
     path: ./rules/zuluion/ProxyClient.yaml
     url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml"
 
+  Paypal:
+    <<: *rules-classical
+    path: ./rules/blackmatrix7/Paypal.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml"
+  
+
   # 无需代理
   ChinaDomain:
     <<: *rules-domain
@@ -395,6 +401,7 @@ rules:
   - RULE-SET,Gemini,🤖 AI 专用
   - RULE-SET,Anthropic,🤖 AI 专用
   - RULE-SET,Copilot,🤖 AI 专用
+  - RULE-SET,Paypal,✨ 精品线路
   - RULE-SET,gfw,🎯 PROXY
   - RULE-SET,proxy,🎯 PROXY
   - RULE-SET,tld-not-cn,🎯 PROXY
