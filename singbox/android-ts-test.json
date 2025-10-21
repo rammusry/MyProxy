@@ -101,7 +101,7 @@
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 4000,
+      "listen_port": 17890,
       "udp_timeout": "5m"
     },
     {
@@ -121,7 +121,7 @@
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 4000
+          "server_port": 17890
         }
       }
     }

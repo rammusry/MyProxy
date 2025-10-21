@@ -12,7 +12,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
+      "external_controller": "0.0.0.0:19090",
       "secret": "Jiaruoyu_62132",
       "external_ui": "metacubexd",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
@@ -124,7 +124,7 @@
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 4000,
+      "listen_port": 17890,
       "udp_timeout": "5m"
     },
     {
@@ -145,7 +145,7 @@
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 4000
+          "server_port": 17890
         }
       }
     }
