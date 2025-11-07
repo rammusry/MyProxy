@@ -1,6 +1,5 @@
 payload:
   - DOMAIN-SUFFIX,lunary.site
-  - DOMAIN-SUFFIX,linux.do
 # talkatone规则
   # - DOMAIN-SUFFIX,inner-active.mobi
   # - DOMAIN-SUFFIX,mobilefuse.com
