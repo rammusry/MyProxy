@@ -102,7 +102,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: 
       - 🚗 Auto-精品
       - 🇭🇰 港-精品
@@ -110,6 +110,7 @@ proxy-groups:
       - 🇯🇵 日-精品
       - 🇸🇬 新-精品
       - 🇹🇼 台-精品
+      - my-relay-racknerd-hy2
 
   - name: 🛬 落地节点
     interval: 300
