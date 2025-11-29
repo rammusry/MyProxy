@@ -69,7 +69,7 @@ proxy-groups:
 
   - name: 🤖 AI 专用
     interval: 3000
-    timeout: 500
+    timeout: 1500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -89,7 +89,7 @@ proxy-groups:
 
   - name: 💸 经济节点
     interval: 300
-    timeout: 500
+    timeout: 1500
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -98,7 +98,7 @@ proxy-groups:
    
   - name: ✨ 精品线路
     interval: 300
-    timeout: 500
+    timeout: 1000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -129,7 +129,7 @@ proxy-groups:
 
   - name: 🏠 我的节点
     interval: 3000
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
