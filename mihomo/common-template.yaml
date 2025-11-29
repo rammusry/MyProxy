@@ -55,7 +55,7 @@ proxy-groups:
   # ----------------------------------------------------------------
   - name: 🎯 PROXY  
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -114,7 +114,7 @@ proxy-groups:
 
   - name: 🛬 落地节点
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     type: select
@@ -139,7 +139,7 @@ proxy-groups:
   # --- 各区域具体分组 ---
   - name: 🇺🇸 美-落地
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -148,7 +148,7 @@ proxy-groups:
 
   - name: 🇯🇵 日-落地
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -157,7 +157,7 @@ proxy-groups:
 
   - name: 🇸🇬 新-落地
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -166,7 +166,7 @@ proxy-groups:
 
   - name: 🇹🇼 台-落地
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -175,7 +175,7 @@ proxy-groups:
 
   - name: 🇳🇬 尼-落地
     interval: 30000
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -184,7 +184,7 @@ proxy-groups:
 
   - name: 🌍 其他地区
     interval: 86400
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -194,7 +194,7 @@ proxy-groups:
   # ----------------------------------------------------------------
   - name: 🚗 Auto-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -203,7 +203,7 @@ proxy-groups:
 
   - name: 😃 我的中转
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -212,7 +212,7 @@ proxy-groups:
 
   - name: 🇭🇰 港-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -221,7 +221,7 @@ proxy-groups:
 
   - name: 🇺🇸 美-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -230,7 +230,7 @@ proxy-groups:
 
   - name: 🇯🇵 日-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -239,7 +239,7 @@ proxy-groups:
 
   - name: 🇸🇬 新-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
@@ -248,7 +248,7 @@ proxy-groups:
   
   - name: 🇹🇼 台-精品
     interval: 300
-    timeout: 500
+    timeout: 2000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
