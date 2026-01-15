@@ -62,8 +62,7 @@ proxy-groups:
     type: select
     proxies:
       - 💸 经济节点  
-      - ✨ 精品线路 
-      - 🛬 落地节点  
+      - ✨ 精品线路
       - 🏠 我的节点 
       - DIRECT
 
@@ -75,17 +74,12 @@ proxy-groups:
     max-failed-times: 3
     type: select
     proxies:
-      - webshare 
-      - 🇺🇸 美-落地
       - 🇺🇸 美-精品
-      - 🇯🇵 日-落地
       - 🇯🇵 日-精品
-      - 🇸🇬 新-落地
       - 🇸🇬 新-精品
-      - 🇹🇼 台-落地
       - 🇹🇼 台-精品
-      - 🏠 我的节点
       - 🌍 其他地区
+      - 🏠 我的节点
 
   - name: 💸 经济节点
     interval: 300
@@ -110,23 +104,6 @@ proxy-groups:
       - 🇯🇵 日-精品
       - 🇸🇬 新-精品
       - 🇹🇼 台-精品
-      - 😃 我的中转
-
-  - name: 🛬 落地节点
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    type: select
-    proxies:
-      - 🇺🇸 美-落地
-      - 🇯🇵 日-落地
-      - 🇸🇬 新-落地
-      - 🇹🇼 台-落地
-      - 🇳🇬 尼-落地
-      - 🌍 其他地区
-      - 🏠 我的节点 
-      - webshare 
 
   - name: 🏠 我的节点
     interval: 3000
@@ -138,61 +115,6 @@ proxy-groups:
     proxies: []
 
   # --- 各区域具体分组 ---
-  - name: 🇺🇸 美-落地
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🇯🇵 日-落地
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🇸🇬 新-落地
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🇹🇼 台-落地
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🇳🇬 尼-落地
-    interval: 30000
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  - name: 🌍 其他地区
-    interval: 86400
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
-
-  # ----------------------------------------------------------------
   - name: 🚗 Auto-精品
     interval: 300
     timeout: 2000
@@ -200,15 +122,6 @@ proxy-groups:
     lazy: true
     max-failed-times: 3
     type: url-test
-    proxies: []
-
-  - name: 😃 我的中转
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
     proxies: []
 
   - name: 🇭🇰 港-精品
@@ -256,6 +169,24 @@ proxy-groups:
     type: url-test
     proxies: []
 
+  - name: 🇳🇬 尼-精品
+    interval: 30000
+    timeout: 2000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+  - name: 🌍 其他地区
+    interval: 86400
+    timeout: 2000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
   # ----------------------------------------------------------------
   # 🛡️ 功能性分组
   # ----------------------------------------------------------------
@@ -271,6 +202,15 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🎯 PROXY
+
+  - name: 😃 我的中转
+    interval: 300
+    timeout: 2000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
 
 # 规则配置模块 - 包含规则集和路由规则
 # 注意：此模块提供基础的规则集和规则配置
