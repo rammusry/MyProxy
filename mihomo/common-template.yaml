@@ -133,7 +133,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: []
 
   - name: 🇺🇸 美-精品
@@ -142,7 +142,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: []
 
   - name: 🇯🇵 日-精品
@@ -151,7 +151,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: []
 
   - name: 🇸🇬 新-精品
@@ -160,7 +160,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: []
   
   - name: 🇹🇼 台-精品
@@ -169,7 +169,7 @@ proxy-groups:
     url: "https://www.gstatic.com/generate_204"
     lazy: true
     max-failed-times: 3
-    type: url-test
+    type: select
     proxies: []
 
   - name: 🇳🇬 尼-精品

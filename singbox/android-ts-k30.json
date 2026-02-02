@@ -248,32 +248,32 @@
     },
     {
       "tag": "🚗 Auto-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
       "tag": "🇭🇰 港-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
       "tag": "🇺🇸 美-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
       "tag": "🇯🇵 日-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
       "tag": "🇸🇬 新-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
       "tag": "🇹🇼 台-精品",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": []
     },
     {
