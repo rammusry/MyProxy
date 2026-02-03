@@ -2,6 +2,7 @@
   "rules": [
     {
       "domain_keyword": [
+        "lmarena.ai",
         "notebooklm.google"
       ]
     },
