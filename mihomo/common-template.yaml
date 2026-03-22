@@ -25,29 +25,63 @@ rules-classical: &rules-classical
   interval: 86400
   behavior: classical
 
-# DNS配置模块 - 白名单模式
 dns:
   enable: true
   ipv6: false
-  respect-rules: true
-  enhanced-mode: 
-  fake-ip-filter:
-    - "*"
+  use-hosts: true        # 是否使用配置中的hosts。默认true
+  use-system-hosts: true # 是否使用系统hosts。默认true
+  cache-algorithm: arc   # lru|arc。默认lru。arc：兼顾‘最近用过的’和‘经常用到的’
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist  # 支持rule|whitelist|blacklist。默认为blacklist
+  fake-ip-filter:               # 为其他模式时请参考文档写法
+    - "*.lan"
     - "+.lan"
+    - "*.local"
     - "+.local"
+    - "+.localdomain"
+    - "+.home.arpa"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "connectivitycheck.gstatic.com"
+    - "+.captive.apple.com"
+    - "time.*.com"
+    - "time.*.gov"
+    - "ntp.*.com"
+    - "ntp.*.org"
+    - "pool.ntp.org"
+    - "+.pool.ntp.org"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
     - "+.market.xiaomi.com"
-  default-nameserver:      #基础DNS服务器，必须先有它才能使用域名类型的DNS配置，因此必须为IP，此处使用阿里云DNS
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:      # 基础DNS服务器，负责解析dns的dns。必须使用ip
     - tls://223.5.5.5
     - tls://223.6.6.6
-  nameserver:         #在访问的国外网站没有匹配到任何域名规则，最终走了MATCH兜底规则时使用的DNS，为了确保不发生DNS泄漏和DNS污染，必须使用国外DNS
+
+  # dns分流配置
+  nameserver-policy:  # 优先级最高。命中以下规则的走nameserver
+    "geosite:private": system
+  nameserver:        # 没有匹配到任何dns规则，命中MATCH兜底的默认DNS。个人偏好国内dns。
+    - https://dns.alidns.com/dns-query 
+    - https://doh.pub/dns-query
+  fallback:          # 一般使用境外DNS，确保可信
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
-  proxy-server-nameserver:         #解析代理节点时使用的DNS，为了使下面的respect-rules生效必须设置，最好设置为国内DNS，否则在代理的第一步就可能因为连接不上国外DNS而解析不出代理节点的IP，最终倒在起点
+  fallback-filter:   # fallback明确声明，命中该部分的将使用/优先使用fallback解析结果。
+    geoip: true
+    geoip-code: CN   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+  respect-rules: true  # 让dns解析时遵循分流规则。需配置proxy-server-nameserver。等价于在 DNS 上游后写 #RULES
+  prefer-h3: false     # 使用respect-rules时，不应开启该设置。
+  proxy-server-nameserver:   # 仅用于解析代理节点的DNS，最好设置为国内DNS，避免鸡蛋问题
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver:           #规则匹配到直连时使用的DNS，既然是可以直连的，当然要用国内DNS
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+  direct-nameserver:        # 直连时的DNS，当然要用国内DNS（或直接使用系统dns）
+    - system
 
 proxy-groups:
   # ----------------------------------------------------------------
