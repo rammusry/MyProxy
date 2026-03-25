@@ -6,7 +6,6 @@ bind-address: "*"
 mode: rule
 log-level: info
 unified-delay: true
-global-client-fingerprint: chrome
 secret: 62132
 
 # 锚点定义
