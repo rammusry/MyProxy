@@ -6,6 +6,7 @@ bind-address: "*"
 mode: rule
 log-level: info
 unified-delay: true
+global-client-fingerprint: chrome
 secret: 62132
 
 # 锚点定义
@@ -38,7 +39,6 @@ dns:
     - "*.local"
     - "+.local"
     - "+.localdomain"
-    - "+.ts.net"
     - "+.home.arpa"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
@@ -54,18 +54,14 @@ dns:
     - "+.stun.*.*.*"
     - "+.stun.*.*.*.*"
     - "+.market.xiaomi.com"
-    - "+.jlu.edu.cn"
   fake-ip-range: 198.18.0.1/16
   default-nameserver:      # 基础DNS服务器，负责解析dns的dns。必须使用ip
-    - 223.5.5.5
-    - 223.6.6.6
+    - tls://223.5.5.5
+    - tls://223.6.6.6
 
   # dns分流配置
   nameserver-policy:  # 优先级最高。命中以下规则的走nameserver
-    "+.ts.net":
-      - 100.100.100.100  
-    "+.jlu.edu.cn":
-      - 10.10.10.10    
+    "geosite:private": system
   nameserver:        # 没有匹配到任何dns规则，命中MATCH兜底的默认DNS。个人偏好国内dns。
     - https://dns.alidns.com/dns-query 
     - https://doh.pub/dns-query
@@ -84,10 +80,8 @@ dns:
   proxy-server-nameserver:   # 仅用于解析代理节点的DNS，最好设置为国内DNS，避免鸡蛋问题
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver:        # 直连时的DNS，当然要用国内DNS
-    - 223.5.5.5
-    - 223.6.6.6
-  direct-nameserver-follow-policy: true
+  direct-nameserver:        # 直连时的DNS，当然要用国内DNS（或直接使用系统dns）
+    - system
 
 proxy-groups:
   # ----------------------------------------------------------------
@@ -384,18 +378,11 @@ rule-providers:
 # 路由规则配置
 # 请设置域名类规则优先，ip类规则置后！
 rules:
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-  - IP-CIDR6,fd7a:115c:a1e0::/48,DIRECT,no-resolve
-  - RULE-SET,lancidr,DIRECT,no-resolve
-  - PROCESS-NAME,tailscaled,DIRECT
-  - PROCESS-NAME,Tailscale.exe,DIRECT
-  - PROCESS-NAME,tailscale.exe,DIRECT
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
-  - RULE-SET,ry-reject,🚫 广告拦截
-  - RULE-SET,Advertising,🚫 广告拦截
   - RULE-SET,ry-direct,DIRECT
   - RULE-SET,ry-selector,✨ 精品线路
   - RULE-SET,ry-proxy,🎯 PROXY
+  - RULE-SET,ry-reject,🚫 广告拦截
   - RULE-SET,ry-pure,🤖 AI 专用
   - RULE-SET,OpenAI,🤖 AI 专用
   - RULE-SET,Gemini,🤖 AI 专用
@@ -411,5 +398,7 @@ rules:
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
   - RULE-SET,cncidr,DIRECT,no-resolve
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - RULE-SET,Advertising,🚫 广告拦截
   - GEOSITE,cn,DIRECT
   - MATCH, 🐟 漏网之鱼
