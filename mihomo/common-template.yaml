@@ -6,7 +6,6 @@ bind-address: "*"
 mode: rule
 log-level: info
 unified-delay: true
-global-client-fingerprint: chrome
 secret: 62132
 
 # 锚点定义
@@ -39,6 +38,7 @@ dns:
     - "*.local"
     - "+.local"
     - "+.localdomain"
+    - "+.ts.net"
     - "+.home.arpa"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
@@ -54,14 +54,18 @@ dns:
     - "+.stun.*.*.*"
     - "+.stun.*.*.*.*"
     - "+.market.xiaomi.com"
+    - "+.jlu.edu.cn"
   fake-ip-range: 198.18.0.1/16
   default-nameserver:      # 基础DNS服务器，负责解析dns的dns。必须使用ip
-    - tls://223.5.5.5
-    - tls://223.6.6.6
+    - 223.5.5.5
+    - 223.6.6.6
 
   # dns分流配置
   nameserver-policy:  # 优先级最高。命中以下规则的走nameserver
-    "geosite:private": system
+    "+.ts.net":
+      - 100.100.100.100  
+    "+.jlu.edu.cn":
+      - 10.10.10.10    
   nameserver:        # 没有匹配到任何dns规则，命中MATCH兜底的默认DNS。个人偏好国内dns。
     - https://dns.alidns.com/dns-query 
     - https://doh.pub/dns-query
@@ -80,8 +84,9 @@ dns:
   proxy-server-nameserver:   # 仅用于解析代理节点的DNS，最好设置为国内DNS，避免鸡蛋问题
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver:        # 直连时的DNS，当然要用国内DNS（或直接使用系统dns）
-    - system
+  direct-nameserver:        # 直连时的DNS，当然要用国内DNS
+    - 223.5.5.5
+    - 223.6.6.6
 
 proxy-groups:
   # ----------------------------------------------------------------
