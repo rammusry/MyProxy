@@ -186,16 +186,15 @@
       "default": "💸 经济节点"
     },
     {
-      "tag": "🤖 AI专用",
+      "tag": "🤖 AI 专用",
       "type": "selector",
       "outbounds": [
-        "🇺🇸 美-精品",
-        "🇯🇵 日-精品",
-        "🇸🇬 新-精品",
-        "🇹🇼 台-精品",
+        "✨ 精品线路",
+        "🛬 落地专用",
+        "📡 稳定线路",
         "🏠 我的节点"
       ],
-      "default": "🏠 我的节点"
+      "default": "✨ 精品线路"
     },
     {
       "tag": "Google",
@@ -232,6 +231,8 @@
         "🇺🇸 美-精品",
         "🇳🇬 尼-精品",
         "🌍 其他地区",
+        "📡 稳定线路",
+        "🛬 落地专用",
         "🏠 我的节点"
       ]
     },
@@ -242,6 +243,16 @@
     },
     {
       "tag": "🏠 我的节点",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "📡 稳定线路",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🛬 落地专用",
       "type": "selector",
       "outbounds": []
     },
@@ -303,11 +314,6 @@
         "🎯 PROXY"
       ],
       "default": "Reject"
-    },
-    {
-      "tag": "😃 我的中转",
-      "type": "selector",
-      "outbounds": []
     },
     {
       "tag": "Direct",
@@ -536,7 +542,7 @@
           "ry-rule-pure"
         ],
         "action": "route",
-        "outbound": "🤖 AI专用"
+        "outbound": "🤖 AI 专用"
       },
       {
         "rule_set": [

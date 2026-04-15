@@ -116,11 +116,9 @@ proxy-groups:
     max-failed-times: 3
     type: select
     proxies:
-      - 🇺🇸 美-精品
-      - 🇯🇵 日-精品
-      - 🇸🇬 新-精品
-      - 🇹🇼 台-精品
-      - 🌍 其他地区
+      - ✨ 精品线路
+      - 🛬 落地专用
+      - 📡 稳定线路
       - 🏠 我的节点
 
   - name: 💸 经济节点
@@ -148,10 +146,30 @@ proxy-groups:
       - 🇹🇼 台-精品
       - 🇳🇬 尼-精品
       - 🌍 其他地区
+      - 📡 稳定线路
+      - 🛬 落地专用
       - 🏠 我的节点
 
   - name: 🏠 我的节点
     interval: 3000
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+  - name: 📡 稳定线路
+    interval: 300
+    timeout: 2000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+  - name: 🛬 落地专用
+    interval: 300
     timeout: 3000
     url: "https://www.gstatic.com/generate_204"
     lazy: true
@@ -247,15 +265,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🎯 PROXY
-
-  - name: 😃 中转专用
-    interval: 300
-    timeout: 2000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: select
-    proxies: []
 
 # 规则配置模块 - 包含规则集和路由规则
 # 注意：此模块提供基础的规则集和规则配置
