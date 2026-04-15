@@ -117,7 +117,7 @@ proxy-groups:
     type: select
     proxies:
       - ✨ 精品线路
-      - 🛬 落地专用
+      - 🛬 落地中转
       - 📡 稳定线路
       - 🏠 我的节点
 
@@ -147,7 +147,7 @@ proxy-groups:
       - 🇳🇬 尼-精品
       - 🌍 其他地区
       - 📡 稳定线路
-      - 🛬 落地专用
+      - 🛬 落地中转
       - 🏠 我的节点
 
   - name: 🏠 我的节点
@@ -168,7 +168,7 @@ proxy-groups:
     type: select
     proxies: []
 
-  - name: 🛬 落地专用
+  - name: 🛬 落地中转
     interval: 300
     timeout: 3000
     url: "https://www.gstatic.com/generate_204"
