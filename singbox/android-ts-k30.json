@@ -224,7 +224,6 @@
       "tag": "✨ 精品线路",
       "type": "selector",
       "outbounds": [
-        "🚗 Auto-精品",
         "🇭🇰 港-精品",
         "🇯🇵 日-精品",
         "🇸🇬 新-精品",
@@ -254,11 +253,6 @@
     },
     {
       "tag": "🛬 落地中转",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🚗 Auto-精品",
       "type": "selector",
       "outbounds": []
     },

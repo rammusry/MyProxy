@@ -138,7 +138,6 @@ proxy-groups:
     max-failed-times: 3
     type: select
     proxies: 
-      - 🚗 Auto-精品
       - 🇭🇰 港-精品
       - 🇺🇸 美-精品
       - 🇯🇵 日-精品
@@ -178,15 +177,6 @@ proxy-groups:
     proxies: []
 
   # --- 各区域具体分组 ---
-  - name: 🚗 Auto-精品
-    interval: 300
-    timeout: 3000
-    url: "https://www.gstatic.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    type: url-test
-    proxies: []
-
   - name: 🇭🇰 港-精品
     interval: 300
     timeout: 3000
