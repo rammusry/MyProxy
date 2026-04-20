@@ -143,6 +143,7 @@ proxy-groups:
       - 🇯🇵 日-精品
       - 🇸🇬 新-精品
       - 🇹🇼 台-精品
+      - 🇩🇪 德-精品
       - 🇳🇬 尼-精品
       - 🌍 其他地区
       - 📡 稳定线路
@@ -214,6 +215,15 @@ proxy-groups:
     proxies: []
   
   - name: 🇹🇼 台-精品
+    interval: 300
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+  - name: 🇩🇪 德-精品
     interval: 300
     timeout: 3000
     url: "https://www.gstatic.com/generate_204"
