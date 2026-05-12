@@ -120,6 +120,7 @@ proxy-groups:
       - 🛬 落地中转
       - 📡 稳定线路
       - 🏠 我的节点
+      - ⚠️ 不懂别选
 
   - name: 💸 经济节点
     interval: 300
@@ -169,6 +170,15 @@ proxy-groups:
     proxies: []
 
   - name: 🛬 落地中转
+    interval: 300
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies: []
+
+  - name: ⚠️ 不懂别选
     interval: 300
     timeout: 3000
     url: "https://www.gstatic.com/generate_204"
