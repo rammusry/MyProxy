@@ -301,20 +301,20 @@ rule-providers:
     url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.yaml"
     path: ./ruleset/ry-proxy.yaml
 
-  ry-selector:
+  ry-ai:
     <<: *rules-classical
-    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-selector.yaml"
-    path: ./ruleset/ry-selector.yaml
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-ai.yaml"
+    path: ./ruleset/ry-ai.yaml
 
   ry-reject:
     <<: *rules-classical
     url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.yaml"
     path: ./ruleset/ry-reject.yaml
   
-  ry-pure:
+  ry-premium:
     <<: *rules-classical
-    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-pure.yaml"
-    path: ./ruleset/ry-pure.yaml
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-premium.yaml"
+    path: ./ruleset/ry-premium.yaml
 
   # AI 类
   OpenAI:
@@ -425,14 +425,14 @@ rules:
   - RULE-SET,ry-reject,🚫 广告拦截
   - RULE-SET,Advertising,🚫 广告拦截
   - RULE-SET,ry-direct,DIRECT
-  - RULE-SET,ry-selector,✨ 精品线路
-  - RULE-SET,ry-proxy,🎯 PROXY
-  - RULE-SET,ry-pure,🤖 AI 专用
+  - RULE-SET,ry-ai,🤖 AI 专用
   - RULE-SET,OpenAI,🤖 AI 专用
   - RULE-SET,Gemini,🤖 AI 专用
   - RULE-SET,Anthropic,🤖 AI 专用
   - RULE-SET,Copilot,🤖 AI 专用
+  - RULE-SET,ry-premium,✨ 精品线路
   - RULE-SET,Paypal,✨ 精品线路
+  - RULE-SET,ry-proxy,🎯 PROXY
   - RULE-SET,gfw,🎯 PROXY
   - RULE-SET,proxy,🎯 PROXY
   - RULE-SET,tld-not-cn,🎯 PROXY

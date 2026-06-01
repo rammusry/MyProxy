@@ -334,17 +334,17 @@
         "download_detour": "🎯 PROXY"
       },
       {
-        "tag": "ry-rule-selector",
+        "tag": "ry-rule-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-selector.srs",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-ai.srs",
         "download_detour": "🎯 PROXY"
       },
       {
-        "tag": "ry-rule-pure",
+        "tag": "ry-rule-premium",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-pure.srs",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-premium.srs",
         "download_detour": "🎯 PROXY"
       },
       {
@@ -528,14 +528,14 @@
           "Anthropic",
           "OpenAI",
           "Gemini",
-          "ry-rule-pure"
+          "ry-rule-ai"
         ],
         "action": "route",
         "outbound": "🤖 AI 专用"
       },
       {
         "rule_set": [
-          "ry-rule-selector"
+          "ry-rule-premium"
         ],
         "action": "route",
         "outbound": "✨ 精品线路"
