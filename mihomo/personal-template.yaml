@@ -65,15 +65,18 @@ dns:
   # dns分流配置
   nameserver-policy:  # 优先级最高。命中以下规则的走nameserver
     "+.ts.net":
-      - 100.100.100.100  
+      - 100.100.100.100
     "+.jlu.edu.cn":
-      - 10.10.10.10    
-  nameserver:        # 没有匹配到任何dns规则，命中MATCH兜底的默认DNS。个人偏好国内dns。
-    - https://dns.alidns.com/dns-query 
-    - https://doh.pub/dns-query
+      - 10.10.10.10
+    "geosite:cn":
+      - https://dns.alidns.com/dns-query#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  nameserver:        # 默认DNS用于非国内/未知域名，跟随路由规则，避免经校园DNS暴露目标域名。
+    - https://cloudflare-dns.com/dns-query#RULES
+    - https://dns.google/dns-query#RULES
   fallback:          # 一般使用境外DNS，确保可信
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query#RULES
+    - https://dns.google/dns-query#RULES
   fallback-filter:   # fallback明确声明，命中该部分的将使用/优先使用fallback解析结果。
     geoip: true
     geoip-code: CN   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染
@@ -86,9 +89,9 @@ dns:
   proxy-server-nameserver:   # 仅用于解析代理节点的DNS，最好设置为国内DNS，避免鸡蛋问题
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver:        # 直连时的DNS，当然要用国内DNS
-    - 223.5.5.5
-    - 223.6.6.6
+  direct-nameserver:        # 直连时使用国内DoH，减少校园网/运营商明文DNS暴露面
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
   direct-nameserver-follow-policy: true
 
 proxy-groups:
