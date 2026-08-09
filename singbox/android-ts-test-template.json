@@ -458,7 +458,7 @@
       },
       {
         "clash_mode": "direct",
-        "outbound": "direct"
+        "outbound": "Direct"
       },
       {
         "clash_mode": "global",
