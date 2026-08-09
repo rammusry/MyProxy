@@ -78,8 +78,8 @@
           "jsdmirror.com",
           "fastly.jsdelivr.net"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-DIRECT"
       },
       {
@@ -87,16 +87,16 @@
           "msftconnecttest.com",
           "msftncsi.com"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-MICROSOFT"
       },
       {
         "domain_keyword": [
           "googleapis"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-GOOGLE"
       },
       {
@@ -104,16 +104,16 @@
           "China",
           "ChinaIP"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-DIRECT"
       },
       {
         "rule_set": [
           "GoogleFCM"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-GOOGLEFCM"
       }
     ],

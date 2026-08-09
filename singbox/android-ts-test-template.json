@@ -73,15 +73,14 @@
           "jsdmirror.com",
           "fastly.jsdelivr.net"
         ],
+        "ip_version": 4,
         "action": "route",
-        "strategy": "ipv4_only",
         "server": "DNS-DIRECT"
       },
       {
         "domain_suffix": [
           ".ts.net"
         ],
-        "ip_accept_any": true,
         "server": "dns_ts"
       },
       {
