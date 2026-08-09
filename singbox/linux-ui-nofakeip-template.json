@@ -324,112 +324,144 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-direct.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "ry-rule-proxy",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "ry-rule-ai",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-ai.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "ry-rule-premium",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-premium.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "ry-rule-reject",
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "China",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/China/China.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "ChinaIP",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaIPs/ChinaIPs.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Proxy/Proxy.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "GoogleFCM",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleFCM/GoogleFCM.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Google",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Google/Google.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Anthropic",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Anthropic/Anthropic.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "OpenAI",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Gemini",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       },
       {
         "tag": "Advertising",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/AdvertisingLite/AdvertisingLite.srs",
-        "download_detour": "🎯 PROXY"
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       }
     ],
     "rules": [
