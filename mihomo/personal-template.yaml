@@ -424,6 +424,8 @@ rules:
   - PROCESS-NAME,tailscaled,DIRECT
   - PROCESS-NAME,Tailscale.exe,DIRECT
   - PROCESS-NAME,tailscale.exe,DIRECT
+  # SSH 客户端直连（避免 TUN 劫持运维连接：ssh/scp/sftp/rsync）
+  - PROCESS-NAME-REGEX,^(ssh|scp|sftp|rsync)$,DIRECT
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - PROCESS-NAME,ChatGPT,🤖 AI 专用
   - PROCESS-NAME,ChatGPT.exe,🤖 AI 专用
