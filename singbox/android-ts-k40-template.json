@@ -484,6 +484,15 @@
         "http_client": {
           "detour": "🎯 PROXY"
         }
+      },
+      {
+        "tag": "Telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/Telegram.srs",
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
       }
     ],
     "rules": [
@@ -547,7 +556,15 @@
           "com.talkatone.android"
         ],
         "action": "route",
-        "outbound": "🇺🇸 美-精品"
+        "outbound": "🤖 AI 专用"
+      },
+      {
+        "process_name": [
+          "ChatGPT",
+          "ChatGPT.exe"
+        ],
+        "action": "route",
+        "outbound": "🤖 AI 专用"
       },
       {
         "package_name": [
@@ -606,6 +623,13 @@
         "rule_set": [
           "Proxy",
           "ry-rule-proxy"
+        ],
+        "action": "route",
+        "outbound": "🎯 PROXY"
+      },
+      {
+        "rule_set": [
+          "Telegram"
         ],
         "action": "route",
         "outbound": "🎯 PROXY"

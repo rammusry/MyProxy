@@ -425,6 +425,8 @@ rules:
   - PROCESS-NAME,Tailscale.exe,DIRECT
   - PROCESS-NAME,tailscale.exe,DIRECT
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
+  - PROCESS-NAME,ChatGPT,🤖 AI 专用
+  - PROCESS-NAME,ChatGPT.exe,🤖 AI 专用
   - RULE-SET,ry-reject,🚫 广告拦截
   - RULE-SET,Advertising,🚫 广告拦截
   - RULE-SET,ry-direct,DIRECT
