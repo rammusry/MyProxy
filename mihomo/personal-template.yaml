@@ -125,6 +125,28 @@ proxy-groups:
       - 🏠 我的节点
       - ⚠️ 不懂别选
 
+
+  - name: 🌐 Google
+    interval: 300
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies:
+      - 🎯 PROXY
+      - DIRECT
+
+  - name: 🎓 科研学术
+    interval: 300
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies:
+      - DIRECT
+      - 🎯 PROXY
   - name: 💸 经济节点
     interval: 300
     timeout: 3000
@@ -330,6 +352,17 @@ rule-providers:
     path: ./rules/blackmatrix7/Gemini.yaml
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml"
 
+
+  # Google 与科研学术类
+  Google:
+    <<: *rules-classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
+    path: ./rules/blackmatrix7/Google.yaml
+
+  scholar:
+    <<: *rules-classical
+    url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/category-scholar-!cn.yaml"
+    path: ./rules/v2fly/category-scholar-!cn.yaml
   Anthropic:
     <<: *rules-classical
     path: ./rules/blackmatrix7/Claude.yaml
@@ -437,6 +470,8 @@ rules:
   - RULE-SET,Gemini,🤖 AI 专用
   - RULE-SET,Anthropic,🤖 AI 专用
   - RULE-SET,Copilot,🤖 AI 专用
+  - RULE-SET,Google,🌐 Google
+  - RULE-SET,scholar,🎓 科研学术
   - RULE-SET,ry-premium,✨ 精品线路
   - RULE-SET,Paypal,✨ 精品线路
   - RULE-SET,ry-proxy,🎯 PROXY

@@ -52,7 +52,7 @@
         "tag": "DNS-GOOGLEFCM",
         "server": "8.8.8.8",
         "server_port": 53,
-        "detour": "Google"
+        "detour": "🌐 Google"
       },
       {
         "type": "https",
@@ -60,7 +60,7 @@
         "server": "cloudflare-dns.com",
         "server_port": 443,
         "domain_resolver": "DNS-RESOLVER",
-        "detour": "Google"
+        "detour": "🌐 Google"
       },
       {
         "type": "udp",
@@ -198,15 +198,22 @@
       "default": "✨ 精品线路"
     },
     {
-      "tag": "Google",
+      "tag": "🌐 Google",
       "type": "selector",
       "outbounds": [
         "🎯 PROXY",
-        "💸 经济节点",
-        "✨ 精品线路",
-        "🏠 我的节点"
+        "Direct"
       ],
       "default": "🎯 PROXY"
+    },
+    {
+      "tag": "🎓 科研学术",
+      "type": "selector",
+      "outbounds": [
+        "Direct",
+        "🎯 PROXY"
+      ],
+      "default": "Direct"
     },
     {
       "tag": "Microsoft",
@@ -424,10 +431,19 @@
         }
       },
       {
-        "tag": "Google",
+        "tag": "🌐 Google",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Google/Google.srs",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/Google.srs",
+        "http_client": {
+          "detour": "🎯 PROXY"
+        }
+      },
+      {
+        "tag": "scholar",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/category-scholar-!cn.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -581,13 +597,6 @@
         "outbound": "Direct"
       },
       {
-        "domain_keyword": [
-          "googleapis"
-        ],
-        "action": "route",
-        "outbound": "Google"
-      },
-      {
         "rule_set": [
           "Anthropic",
           "OpenAI",
@@ -596,6 +605,20 @@
         ],
         "action": "route",
         "outbound": "🤖 AI 专用"
+      },
+      {
+        "rule_set": [
+          "Google"
+        ],
+        "action": "route",
+        "outbound": "🌐 Google"
+      },
+      {
+        "rule_set": [
+          "scholar"
+        ],
+        "action": "route",
+        "outbound": "🎓 科研学术"
       },
       {
         "rule_set": [
@@ -632,7 +655,7 @@
           "GoogleFCM"
         ],
         "action": "route",
-        "outbound": "Google"
+        "outbound": "🌐 Google"
       },
       {
         "rule_set": [
@@ -642,13 +665,6 @@
         ],
         "action": "route",
         "outbound": "Direct"
-      },
-      {
-        "rule_set": [
-          "Google"
-        ],
-        "action": "route",
-        "outbound": "Google"
       },
       {
         "rule_set": [
