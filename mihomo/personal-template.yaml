@@ -440,7 +440,7 @@ rule-providers:
 # 请设置域名类规则优先，ip类规则置后！
 rules:
   # wlan0网段直连：作为热点+开启tun时链路正常
-  - SRC-IP-CIDR,10.42.0.0/24,DIRECT
+  - SRC-IP-CIDR,10.42.0.0/24,DIRECT,no-resolve
   - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - IP-CIDR6,fd7a:115c:a1e0::/48,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
