@@ -69,7 +69,7 @@ dns:
     "+.jlu.edu.cn":
       - 10.10.10.10
     "geosite:cn":
-      - https://dns.alidns.com/dns-query#DIRECT
+      - https://223.6.6.6/dns-query#DIRECT
       - https://doh.pub/dns-query#DIRECT
   nameserver:        # 默认DNS用于非国内/未知域名，跟随路由规则，避免经校园DNS暴露目标域名。
     - https://cloudflare-dns.com/dns-query#RULES
@@ -87,10 +87,10 @@ dns:
   respect-rules: true  # 让dns解析时遵循分流规则。需配置proxy-server-nameserver。等价于在 DNS 上游后写 #RULES
   prefer-h3: false     # 使用respect-rules时，不应开启该设置。
   proxy-server-nameserver:   # 仅用于解析代理节点的DNS，最好设置为国内DNS，避免鸡蛋问题
-    - https://dns.alidns.com/dns-query
+    - https://223.6.6.6/dns-query
     - https://doh.pub/dns-query
   direct-nameserver:        # 直连时使用国内DoH，减少校园网/运营商明文DNS暴露面
-    - https://dns.alidns.com/dns-query#DIRECT
+    - https://223.6.6.6/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
   direct-nameserver-follow-policy: true
 
@@ -439,8 +439,6 @@ rule-providers:
 # 路由规则配置
 # 请设置域名类规则优先，ip类规则置后！
 rules:
-  # wlan0网段直连：作为热点+开启tun时链路正常
-  - SRC-IP-CIDR,10.42.0.0/24,DIRECT,no-resolve
   - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - IP-CIDR6,fd7a:115c:a1e0::/48,DIRECT,no-resolve
   - RULE-SET,lancidr,DIRECT,no-resolve
