@@ -2,4 +2,4 @@ payload:
   - DOMAIN-SUFFIX,linux.do
   - DOMAIN-SUFFIX,710410.xyz
   - DOMAIN-SUFFIX,ping0.cc
-#  - DOMAIN-KEYWORD,augment
+  - DOMAIN-KEYWORD,augment

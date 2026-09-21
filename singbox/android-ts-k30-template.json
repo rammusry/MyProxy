@@ -216,6 +216,17 @@
       "default": "Direct"
     },
     {
+      "tag": "🛠️ 我的服务",
+      "type": "selector",
+      "outbounds": [
+        "🎯 PROXY",
+        "🏠 我的节点",
+        "✨ 精品线路",
+        "Direct"
+      ],
+      "default": "🎯 PROXY"
+    },
+    {
       "tag": "Microsoft",
       "type": "selector",
       "outbounds": [
@@ -595,6 +606,24 @@
         ],
         "action": "route",
         "outbound": "Direct"
+      },
+      {
+        "domain_suffix": [
+          "410710.xyz"
+        ],
+        "action": "route",
+        "outbound": "Direct"
+      },
+      {
+        "domain_suffix": [
+          "crushry.site",
+          "lunary.site",
+          "710410.xyz",
+          "950410.xyz",
+          "crushry.work"
+        ],
+        "action": "route",
+        "outbound": "🛠️ 我的服务"
       },
       {
         "rule_set": [

@@ -143,6 +143,19 @@ proxy-groups:
     max-failed-times: 3
     type: url-test
     proxies: []
+
+  - name: 🛠️ 我的服务
+    interval: 300
+    timeout: 3000
+    url: "https://www.gstatic.com/generate_204"
+    lazy: true
+    max-failed-times: 3
+    type: select
+    proxies:
+      - 🎯 PROXY
+      - 🏠 我的节点
+      - ✨ 精品线路
+      - DIRECT
    
   - name: ✨ 精品线路
     interval: 300
@@ -450,6 +463,13 @@ rules:
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - PROCESS-NAME,ChatGPT,🤖 AI 专用
   - PROCESS-NAME,ChatGPT.exe,🤖 AI 专用
+  # 个人自托管服务：默认代理以绕开直连拥堵，410710.xyz 始终直连
+  - DOMAIN-SUFFIX,410710.xyz,DIRECT
+  - DOMAIN-SUFFIX,crushry.site,🛠️ 我的服务
+  - DOMAIN-SUFFIX,lunary.site,🛠️ 我的服务
+  - DOMAIN-SUFFIX,710410.xyz,🛠️ 我的服务
+  - DOMAIN-SUFFIX,950410.xyz,🛠️ 我的服务
+  - DOMAIN-SUFFIX,crushry.work,🛠️ 我的服务
   - RULE-SET,ry-reject,🚫 广告拦截
   - RULE-SET,Advertising,🚫 广告拦截
   - RULE-SET,ry-direct,DIRECT
