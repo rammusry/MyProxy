@@ -1,13 +1,7 @@
 {
   "rules": [
     {
-      "domain_keyword": [
-        "augment"
-      ]
-    },
-    {
       "domain_suffix": [
-        ".710410.xyz",
         ".linux.do",
         ".ping0.cc"
       ]
