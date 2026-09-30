@@ -594,6 +594,7 @@
       },
       {
         "domain_suffix": [
+          "crushry.site",
           "410710.xyz"
         ],
         "action": "route",
@@ -601,7 +602,6 @@
       },
       {
         "domain_suffix": [
-          "crushry.site",
           "lunary.site",
           "710410.xyz",
           "950410.xyz",
@@ -622,7 +622,7 @@
       },
       {
         "rule_set": [
-          "Google"
+          "🌐 Google"
         ],
         "action": "route",
         "outbound": "🌐 Google"
