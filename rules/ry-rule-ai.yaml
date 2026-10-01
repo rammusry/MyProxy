@@ -6,3 +6,4 @@ payload:
   - DOMAIN-SUFFIX,genspark.ai
   - DOMAIN-SUFFIX,aistudio.google.com
   - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,muse.ai
