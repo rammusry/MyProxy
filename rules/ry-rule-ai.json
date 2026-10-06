@@ -1,6 +1,13 @@
 {
   "rules": [
     {
+      "domain": [
+        "anthropic.auth0.com",
+        "anthropic.com.cdn.cloudflare.net",
+        "servd-anthropic-website.b-cdn.net"
+      ]
+    },
+    {
       "domain_keyword": [
         "lmarena.ai",
         "notebooklm.google"
@@ -9,11 +16,24 @@
     {
       "domain_suffix": [
         ".aistudio.google.com",
+        ".anthropic.com",
         ".chatgptexporter.com",
+        ".clau.de",
+        ".claude.ai",
+        ".claude.com",
+        ".claudemcpclient.com",
+        ".claudemcpcontent.com",
+        ".claudeusercontent.com",
         ".genspark.ai",
         ".grok.com",
         ".muse.ai",
         ".perplexity.ai"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "160.79.104.0/21",
+        "2607:6bc0::/32"
       ]
     }
   ],

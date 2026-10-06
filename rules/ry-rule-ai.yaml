@@ -1,4 +1,25 @@
 payload:
+
+  # --------------------------------------------------------------------------
+  # Claude / Anthropic
+  # Keep known first-party, authentication, content, and owned-network traffic
+  # on 🤖 AI 专用. This is the source-owned replacement for the former
+  # external Anthropic provider.
+  # --------------------------------------------------------------------------
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,clau.de
+  - DOMAIN-SUFFIX,claudemcpclient.com
+  - DOMAIN-SUFFIX,claudemcpcontent.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN,servd-anthropic-website.b-cdn.net
+  - DOMAIN,anthropic.com.cdn.cloudflare.net
+  - DOMAIN,anthropic.auth0.com
+  # Anthropic, PBC allocations registered in ARIN; retain domain rules above as
+  # the primary match because CDN and service addressing may change.
+  - IP-CIDR,160.79.104.0/21
+  - IP-CIDR6,2607:6bc0::/32
   - DOMAIN-SUFFIX,chatgptexporter.com
   - DOMAIN-KEYWORD,lmarena.ai
   - DOMAIN-KEYWORD,notebooklm.google
