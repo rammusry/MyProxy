@@ -159,7 +159,6 @@
       ],
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
       "mtu": 1400,
       "endpoint_independent_nat": true,
       "udp_timeout": "5m",

@@ -152,8 +152,8 @@ proxy-groups:
     max-failed-times: 3
     type: select
     proxies:
-      - 🎯 PROXY
       - 🏠 我的节点
+      - 🎯 PROXY
       - ✨ 精品线路
       - DIRECT
    
@@ -364,10 +364,6 @@ rule-providers:
     <<: *rules-classical
     url: "https://github.com/rammusry/rules/raw/refs/heads/main/rules/category-scholar-!cn.yaml"
     path: ./rules/v2fly/category-scholar-!cn.yaml
-  Anthropic:
-    <<: *rules-classical
-    path: ./rules/blackmatrix7/Claude.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Anthropic/Anthropic.yaml"
 
   Copilot:
     <<: *rules-classical
@@ -465,7 +461,7 @@ rules:
   - PROCESS-NAME,ChatGPT.exe,🤖 AI 专用
   # 个人自托管服务：默认代理以绕开直连拥堵，410710.xyz 始终直连
   - DOMAIN-SUFFIX,410710.xyz,DIRECT
-  - DOMAIN-SUFFIX,crushry.site,🛠️ 我的服务
+  - DOMAIN-SUFFIX,crushry.site,DIRECT
   - DOMAIN-SUFFIX,lunary.site,🛠️ 我的服务
   - DOMAIN-SUFFIX,710410.xyz,🛠️ 我的服务
   - DOMAIN-SUFFIX,950410.xyz,🛠️ 我的服务
@@ -476,7 +472,6 @@ rules:
   - RULE-SET,ry-ai,🤖 AI 专用
   - RULE-SET,OpenAI,🤖 AI 专用
   - RULE-SET,Gemini,🤖 AI 专用
-  - RULE-SET,Anthropic,🤖 AI 专用
   - RULE-SET,Copilot,🤖 AI 专用
   - RULE-SET,Google,🎯 PROXY
   - RULE-SET,scholar,🎓 科研学术
