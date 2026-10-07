@@ -185,38 +185,38 @@ rule-providers:
   # 基础代理
   gfw:
     <<: *rules-domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/Loyalsoldier/gfw.yaml
 
   proxy:
     <<: *rules-domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
     path: ./ruleset/Loyalsoldier/proxy.yaml
 
   tld-not-cn:
     <<: *rules-domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/Loyalsoldier/tld-not-cn.yaml
 
   # 基础直连
   ChinaDomain:
     <<: *rules-domain
     path: ./rules/ACL4SSR/ChinaDomain.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list"
 
   ChinaCompanyIp:
     <<: *rules-ip
     path: ./rules/ACL4SSR/ChinaCompanyIp.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    url: "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list"
 
   cncidr:
     <<: *rules-ip
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/Loyalsoldier/cncidr.yaml
 
   lancidr:
     <<: *rules-ip
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/Loyalsoldier/lancidr.yaml
 
 rules:

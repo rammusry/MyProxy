@@ -343,7 +343,7 @@
         "tag": "ry-rule-direct",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-direct.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-direct.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -352,7 +352,7 @@
         "tag": "ry-rule-proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-proxy.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-proxy.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -361,7 +361,7 @@
         "tag": "ry-rule-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-ai.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-ai.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -370,7 +370,7 @@
         "tag": "ry-rule-premium",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-premium.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-premium.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -379,7 +379,7 @@
         "tag": "ry-rule-reject",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-reject.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-reject.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -388,7 +388,7 @@
         "tag": "China",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/China/China.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/China/China.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -397,7 +397,7 @@
         "tag": "ChinaIP",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaIPs/ChinaIPs.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/ChinaIPs/ChinaIPs.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -406,7 +406,7 @@
         "tag": "Proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Proxy/Proxy.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Proxy/Proxy.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -415,7 +415,7 @@
         "tag": "GoogleFCM",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleFCM/GoogleFCM.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GoogleFCM/GoogleFCM.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -424,7 +424,7 @@
         "tag": "🌐 Google",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/Google.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/Google.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -433,7 +433,7 @@
         "tag": "scholar",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/category-scholar-!cn.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/category-scholar-!cn.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -442,7 +442,7 @@
         "tag": "Microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Microsoft/Microsoft.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -451,7 +451,7 @@
         "tag": "Apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Apple/Apple.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -460,7 +460,7 @@
         "tag": "Anthropic",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Anthropic/Anthropic.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Anthropic/Anthropic.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -469,7 +469,7 @@
         "tag": "OpenAI",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -478,7 +478,7 @@
         "tag": "Gemini",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Gemini/Gemini.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -487,7 +487,7 @@
         "tag": "Advertising",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/AdvertisingLite/AdvertisingLite.srs",
+        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/AdvertisingLite/AdvertisingLite.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -496,7 +496,7 @@
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/Telegram.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/Telegram.srs",
         "http_client": {
           "detour": "Direct"
         }
