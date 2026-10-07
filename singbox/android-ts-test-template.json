@@ -12,6 +12,9 @@
     "interval": "30m"
   },
   "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
       "default_mode": "rule"
@@ -315,45 +318,45 @@
         "tag": "ry-rule-direct",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-direct.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-direct.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "ry-rule-proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-proxy.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-proxy.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "ry-rule-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-ai.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-ai.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "ry-rule-premium",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-premium.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-premium.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "ry-rule-reject",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-reject.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-reject.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -362,7 +365,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/China/China.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -371,7 +374,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaIPs/ChinaIPs.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -380,7 +383,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Proxy/Proxy.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -389,25 +392,25 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleFCM/GoogleFCM.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "🌐 Google",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Google.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/Google.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "scholar",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/category-scholar-!cn.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/category-scholar-!cn.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -416,7 +419,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -425,7 +428,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -434,7 +437,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Anthropic/Anthropic.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -443,7 +446,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -452,7 +455,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
@@ -461,16 +464,16 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/AdvertisingLite/AdvertisingLite.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       },
       {
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Telegram.srs",
+        "url": "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/Telegram.srs",
         "http_client": {
-          "detour": "🏠 我的节点"
+          "detour": "Direct"
         }
       }
     ],

@@ -319,27 +319,27 @@ rule-providers:
   # 个人专用
   ry-direct:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-direct.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-direct.yaml"
     path: ./ruleset/ry-direct.yaml
 
   ry-proxy:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-proxy.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-proxy.yaml"
     path: ./ruleset/ry-proxy.yaml
 
   ry-ai:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-ai.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-ai.yaml"
     path: ./ruleset/ry-ai.yaml
 
   ry-reject:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-reject.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-reject.yaml"
     path: ./ruleset/ry-reject.yaml
   
   ry-premium:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-premium.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/ry-rule-premium.yaml"
     path: ./ruleset/ry-premium.yaml
 
   # AI 类
@@ -362,7 +362,7 @@ rule-providers:
 
   scholar:
     <<: *rules-classical
-    url: "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/category-scholar-!cn.yaml"
+    url: "https://raw.githubusercontent.com/rammusry/MyProxy/refs/heads/main/rules/category-scholar-!cn.yaml"
     path: ./rules/v2fly/category-scholar-!cn.yaml
 
   Copilot:
