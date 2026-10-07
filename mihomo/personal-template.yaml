@@ -459,6 +459,7 @@ rules:
   - PROCESS-NAME,com.talkatone.android,🤖 AI 专用
   - PROCESS-NAME,ChatGPT,🤖 AI 专用
   - PROCESS-NAME,ChatGPT.exe,🤖 AI 专用
+  - PROCESS-NAME,claude,🤖 AI 专用
   # 个人自托管服务：默认代理以绕开直连拥堵，410710.xyz 始终直连
   - DOMAIN-SUFFIX,410710.xyz,DIRECT
   - DOMAIN-SUFFIX,crushry.site,DIRECT

@@ -587,7 +587,8 @@
       {
         "process_name": [
           "ChatGPT",
-          "ChatGPT.exe"
+          "ChatGPT.exe",
+          "claude"
         ],
         "action": "route",
         "outbound": "🤖 AI 专用"
