@@ -342,7 +342,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-direct.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -351,7 +351,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-proxy.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -360,7 +360,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-ai.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -369,7 +369,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-premium.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -378,7 +378,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-reject.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -387,7 +387,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/China/China.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -396,7 +396,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/ChinaIPs/ChinaIPs.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -405,7 +405,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Proxy/Proxy.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -414,7 +414,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/GoogleFCM/GoogleFCM.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -423,7 +423,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Google.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -432,7 +432,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/category-scholar-!cn.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -441,7 +441,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Microsoft/Microsoft.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -450,7 +450,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Apple/Apple.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -459,7 +459,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Anthropic/Anthropic.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -468,7 +468,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/OpenAI/OpenAI.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -477,7 +477,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/Gemini/Gemini.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -486,7 +486,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/AdvertisingLite/AdvertisingLite.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       },
       {
@@ -495,7 +495,7 @@
         "format": "binary",
         "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Telegram.srs",
         "http_client": {
-          "detour": "🎯 PROXY"
+          "detour": "🏠 我的节点"
         }
       }
     ],
