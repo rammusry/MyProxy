@@ -315,7 +315,7 @@
         "tag": "ry-rule-direct",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-direct.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-direct.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -324,7 +324,7 @@
         "tag": "ry-rule-proxy",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-proxy.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-proxy.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -333,7 +333,7 @@
         "tag": "ry-rule-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-ai.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-ai.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -342,7 +342,7 @@
         "tag": "ry-rule-premium",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-premium.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-premium.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -351,7 +351,7 @@
         "tag": "ry-rule-reject",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/ry-rule-reject.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/ry-rule-reject.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -396,7 +396,7 @@
         "tag": "🌐 Google",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/Google.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Google.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -405,7 +405,7 @@
         "tag": "scholar",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/category-scholar-!cn.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/category-scholar-!cn.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
@@ -468,7 +468,7 @@
         "tag": "Telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/rammusry/rules/raw/refs/heads/main/rules/Telegram.srs",
+        "url": "https://github.com/rammusry/MyProxy/raw/refs/heads/main/rules/Telegram.srs",
         "http_client": {
           "detour": "🎯 PROXY"
         }
