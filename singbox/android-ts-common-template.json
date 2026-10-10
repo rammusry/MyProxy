@@ -720,8 +720,7 @@
     {
       "type": "tailscale",
       "tag": "ts-ep",
-      "auth_key": "",
-      "hostname": "singbox-k70",
+      "detour": "💸 经济节点",
       "udp_timeout": "5m"
     }
   ]

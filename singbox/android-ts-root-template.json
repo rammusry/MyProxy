@@ -1,7 +1,7 @@
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "debug",
     "timestamp": true
   },
   "ntp": {
@@ -150,7 +150,7 @@
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 17890,
+      "listen_port": 4000,
       "udp_timeout": "5m"
     },
     {
@@ -162,6 +162,7 @@
       ],
       "auto_route": true,
       "strict_route": true,
+      "auto_redirect": true,
       "mtu": 1400,
       "endpoint_independent_nat": true,
       "udp_timeout": "5m",
@@ -169,7 +170,7 @@
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 17890
+          "server_port": 4000
         }
       }
     }
@@ -588,15 +589,6 @@
         "outbound": "🤖 AI 专用"
       },
       {
-        "process_name": [
-          "ChatGPT",
-          "ChatGPT.exe",
-          "claude"
-        ],
-        "action": "route",
-        "outbound": "🤖 AI 专用"
-      },
-      {
         "package_name": [
           "kr.co.vcnc.android.couple"
         ],
@@ -619,8 +611,8 @@
       },
       {
         "domain_suffix": [
-          "crushry.site",
-          "410710.xyz"
+          "410710.xyz",
+          "crushry.site"
         ],
         "action": "route",
         "outbound": "Direct"
@@ -714,14 +706,14 @@
       }
     ],
     "final": "🐟 漏网之鱼",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "override_android_vpn": true
   },
   "endpoints": [
     {
       "type": "tailscale",
       "tag": "ts-ep",
-      "auth_key": "",
-      "hostname": "singbox-k70-h",
+      "detour": "💸 经济节点",
       "udp_timeout": "5m"
     }
   ]
