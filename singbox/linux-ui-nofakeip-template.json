@@ -168,13 +168,13 @@
       "tag": "🤖 AI 专用",
       "type": "selector",
       "outbounds": [
-        "✨ 精品线路",
         "🛬 落地中转",
+        "✨ 精品线路",
         "📡 稳定线路",
         "🏠 我的节点",
         "⚠️ 不懂别选"
       ],
-      "default": "✨ 精品线路"
+      "default": "🛬 落地中转"
     },
     {
       "tag": "🌐 Google",
@@ -220,20 +220,7 @@
     {
       "tag": "✨ 精品线路",
       "type": "selector",
-      "outbounds": [
-        "🇭🇰 港-精品",
-        "🇯🇵 日-精品",
-        "🇸🇬 新-精品",
-        "🇹🇼 台-精品",
-        "🇺🇸 美-精品",
-        "🇦🇺 澳-精品",
-        "🇩🇪 德-精品",
-        "🇳🇬 尼-精品",
-        "🌍 其他地区",
-        "📡 稳定线路",
-        "🛬 落地中转",
-        "🏠 我的节点"
-      ]
+      "outbounds": []
     },
     {
       "tag": "💸 经济节点",
@@ -257,51 +244,6 @@
     },
     {
       "tag": "⚠️ 不懂别选",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇭🇰 港-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇺🇸 美-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇯🇵 日-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇸🇬 新-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇹🇼 台-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇦🇺 澳-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇩🇪 德-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🇳🇬 尼-精品",
-      "type": "selector",
-      "outbounds": []
-    },
-    {
-      "tag": "🌍 其他地区",
       "type": "selector",
       "outbounds": []
     },
@@ -362,15 +304,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-ai.srs",
-        "http_client": {
-          "detour": "Direct"
-        }
-      },
-      {
-        "tag": "ry-rule-premium",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/ry-rule-premium.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -582,13 +515,6 @@
         "outbound": "🎯 PROXY"
       },
       {
-        "package_name": [
-          "com.mypaga.cutomer"
-        ],
-        "action": "route",
-        "outbound": "🇳🇬 尼-精品"
-      },
-      {
         "domain": [
           "ntp.aliyun.com"
         ],
@@ -636,13 +562,6 @@
         ],
         "action": "route",
         "outbound": "🎓 科研学术"
-      },
-      {
-        "rule_set": [
-          "ry-rule-premium"
-        ],
-        "action": "route",
-        "outbound": "✨ 精品线路"
       },
       {
         "rule_set": [
