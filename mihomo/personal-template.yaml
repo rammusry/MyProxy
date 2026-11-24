@@ -252,7 +252,7 @@ rule-providers:
   Gemini:
     <<: *rules-classical
     path: ./rules/blackmatrix7/Gemini.yaml
-    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml"
+    url: "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/Gemini.yaml"
 
 
   # Google 与科研学术类
@@ -289,8 +289,7 @@ rule-providers:
     path: ./ruleset/Loyalsoldier/proxy.yaml
 
   tld-not-cn:
-    type: http
-    behavior: domain
+    <<: *rules-domain
     url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/Loyalsoldier/tld-not-cn.yaml
 
@@ -321,11 +320,6 @@ rule-providers:
     path: ./ruleset/Loyalsoldier/lancidr.yaml
 
   # 服务类
-  Talkatone:
-    <<: *rules-classical
-    url: "https://fastly.jsdelivr.net/gh/mottzz87/crules@main/rule/talkatone.list"
-    path: ./ruleset/mottzz87/talkatone.list
-
   Telegram:
     <<: *rules-classical
     url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"

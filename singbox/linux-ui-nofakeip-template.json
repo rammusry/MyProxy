@@ -381,24 +381,6 @@
         }
       },
       {
-        "tag": "Apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Apple/Apple.srs",
-        "http_client": {
-          "detour": "Direct"
-        }
-      },
-      {
-        "tag": "Anthropic",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Anthropic/Anthropic.srs",
-        "http_client": {
-          "detour": "Direct"
-        }
-      },
-      {
         "tag": "OpenAI",
         "type": "remote",
         "format": "binary",
@@ -411,7 +393,7 @@
         "tag": "Gemini",
         "type": "remote",
         "format": "binary",
-        "url": "https://fastly.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Gemini/Gemini.srs",
+        "url": "https://fastly.jsdelivr.net/gh/rammusry/MyProxy@main/rules/Gemini.srs",
         "http_client": {
           "detour": "Direct"
         }
@@ -541,7 +523,6 @@
       },
       {
         "rule_set": [
-          "Anthropic",
           "OpenAI",
           "Gemini",
           "ry-rule-ai"
